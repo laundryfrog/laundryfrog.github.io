@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+  
+	<title>Abenthy's Portfolio</title>
+  
+	<link rel="icon" type="image/x-icon" href="media/self_icon.png">
+	<link rel="stylesheet" href="portfolio2.0.css">
+
+	<!-- Importin icons -->
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+	
+	<script src="portfolio2.0.js"></script>
+</head>
+
+<body>
+
+<div class="row">
+	<div class="col-menu">
+		<img src="media/self.png" alt="me"> 
+		<div class="title">
+			<h2>Abenthy Lillieström</h2>
+			<h3>Junior Rigger</h3>
+		</div>
+		
+		<div class="mobile-only">
+			<img src="media/icon_burger.png" alt="hamburger menu" onclick="openMenu('mobile-menu')">
+		</div>
+		
+		<div class="button-group">
+			<button class="tab-link" onclick="openTab('Professional', this)" id="defaultOpen">Professional work</button>
+			<button class="tab-link" onclick="openTab('Personal', this)">Personal work</button>
+			<button class="tab-link" onclick="openTab('About', this)">About me</button>
+		</div>
+		
+		<div class="contact">
+			<h3>Contact</h3>
+			<a href="mailto: abenthylilliestrom@gmail.com">
+			<img src="media/icon_email.png" alt="email">
+			</a>
+			<a href="https://www.linkedin.com/in/abenthy-lilliestr%C3%B6m-b740901a3/">
+			<img src="media/icon_linkedIn.png" alt="linkedIn">
+			</a>
+			<a href="media/CV.pdf">
+			<img src="media/icon_CV.png" alt="CV">
+			</a>
+		</div>
+	</div>
+	
+	<div class="mobile-only button-group">
+		<div id="mobile-menu" style="display:none">
+			<button class="tab-link" onclick="openTab('Professional', this)">Professional work</button>
+			<button class="tab-link" onclick="openTab('Personal', this)">Personal work</button>
+			<button class="tab-link" onclick="openTab('About', this)">About me</button>
+		</div>
+	</div>
+	
+	<div class="col-content">
+		<div class="bg-content">
+		
+			<div id="Professional" class="tab-content">
+				<h2>Professional work</h2>
+				
+				<div class="proj-professional">
+					<div id="prof-01-info" class="info-parent">
+						<div class="info-background">
+							<img src="media/professional/forspoken_thumb.png"/>
+						</div>
+						<div class="info">
+							<h1>Forspoken</h1>
+							<h3>Cinematic Trailer</h3>
+							<p><b>Role:</b> rigging humanoid characters</p>
+							<div class="info-play" onclick="document.getElementById('prof-01-info').style.display='none'; document.getElementById('prof-01-video').style.display='block';" >
+								<img src="media/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-01-video" class="info-parent" style="display:none">
+						<div class="video-wrapper info-background">
+							<iframe src="https://player.vimeo.com/video/789947325?h=1e06ee8e47" frameborder=0 allowfullscreen></iframe>
+						</div>
+						<div class="info-return" onclick="document.getElementById('prof-01-info').style.display='block'; document.getElementById('prof-01-video').style.display='none';">
+							<img src="media/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="proj-professional">
+					<div id="prof-02-info" class="info-parent">
+						<div class="info-background" >
+							<img src="media/professional/pharaoh_thumb.png"/>
+						</div>
+						<div class="info">
+							<h1>Total War: PHARAOH</h1>
+							<h3>Cinematic Trailer</h3>
+							<p><b>Role:</b> Rigging support - props </p>
+							<div class="info-play" onclick="document.getElementById('prof-02-info').style.display='none'; document.getElementById('prof-02-video').style.display='block';" >
+								<img src="media/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-02-video" class="info-parent" style="display:none">
+						<div class="video-wrapper">
+							<iframe src="https://www.youtube.com/embed/lLlD650ZBFQ" frameborder=0 allowfullscreen></iframe>
+						</div>
+						<div class="info-return" onclick="document.getElementById('prof-02-info').style.display='block'; document.getElementById('prof-02-video').style.display='none';" >
+							<img src="media/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="Personal" class="tab-content">
+					<h2>Personal work and school projects</h2>
+					<p> yippee! </p>
+					
+
+			</div>
+			
+			<div id="About" class="tab-content">
+					<h2>About me</h2>
+					<p>Hello! My name's Abenthy, but I usually go by Ben!</p>
+					<p><--I'm that guy in the sidebar</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<script>
+// Open the default tab
+document.getElementById("defaultOpen").click(); 
+</script>
+
+</body>
+
+</html>

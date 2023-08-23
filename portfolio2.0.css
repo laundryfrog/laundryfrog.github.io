@@ -1,0 +1,237 @@
+/* VARIABLES */
+:root {	
+	--content-max-width: 960px;
+	
+	--sidebar-width: 300px; /* at smallest, sidebar is 130px to prevent text from flowing out. at largest 300px. */
+	--sidebar-inner-border: 20px;
+	
+	--background-color: #444444;
+	--text-color: white;
+	
+	
+	/* buttons */
+	--button-background: #04AA6D;
+	--button-hover: #04A057;
+	--button-selected: #50BA9C;
+}
+
+
+/* GLOBAL STYLE */
+body {
+	margin: 0; /* this margin lets elements touch the edges of the screen */
+	background-image: url("media/amphibian_1162_desktop.png");
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: var(--background-color);
+	
+	color: var(--text-color);
+}
+
+
+/* COLUMNS */
+[class*="col-"] {
+	width: 100%;
+	float: left;
+}
+
+
+/* MENU BAR */
+.col-menu {
+	background-color: #000000AA;
+}
+
+.col-menu img {
+	display: none;
+}
+.col-menu .title {
+	float: left;
+	width: 60%;
+}
+
+.mobile-only{
+	height: 100%;
+}
+
+.mobile-only img {
+	float:right;
+	display: inline;
+	height: 65px;
+}
+
+.mobile-only img:hover {
+	background: var(--button-hover);
+	mix-blend-mode: add;
+}
+
+.mobile-only button {
+	width: 100%;
+	padding: 10px;
+	background-color: transparent;
+	color: white;
+	cursor: pointer; /* Pointer/hand icon */
+	border: 0px;
+}
+
+.col-menu h2, .col-menu h3 {
+	margin: 10px  ; /* less margin for headers, to keep name/title closer to picture */
+	margin-top: 1px;
+}
+
+.col-menu .button-group {
+	display: none;
+	margin: 10px;
+}
+
+.col-menu .button-group button {
+	width: 100%;
+	padding: 10px 24px; /* Some padding */
+	margin-bottom: 10px;
+	background-color: var(--button-background);
+	color: white;
+	cursor: pointer; /* Pointer/hand icon */
+	border-color: green;
+	border-radius: 10px;
+	display: block; /* Make the buttons appear below each other */
+}
+
+.button-group button:hover {
+	background-color: var(--button-hover);
+}
+
+.contact {
+	display: none;
+}
+
+/* the container for all content */
+.col-content {
+	margin-left: 0px;
+}
+
+.col-content img{
+	width: 100%;
+}
+
+/* variable based on winder size */
+/* for desktop when thin */
+@media only screen and (min-width: 768px ) {
+	.mobile-only {
+		display: none; 
+	}
+	
+	.col-menu {
+		position: fixed;
+		width: calc(var(--sidebar-width) - 2 * var(--sidebar-inner-border));
+		margin: var(--sidebar-inner-border);
+	}
+	.col-menu img {	
+		display: inline;
+		width: calc(100% - 20px);
+		margin: 10px;
+	}
+	.col-menu .title {
+		width: 100%;
+	}
+	.col-menu .button-group { /* show button group on big screen, and hide dropdown menu */
+		display: block;
+	}
+	
+	.contact {
+		display: inline;
+	}
+	.contact img {
+		width: 24%;
+	}
+	
+	.col-content {
+		width: calc(100% - var(--sidebar-width));
+		margin-left: var(--sidebar-width);
+	}
+}
+
+/* for desktop when medium */
+@media only screen and (min-width: 1280px) { /* content-max.width + 1 sidebar-width + 20 */
+	.col-content {
+		width: var(--content-max-width);
+	}
+}
+
+/* for desktop when wide */
+@media only screen and (min-width: 1580px) { /* content-max.width + 2 sidebar-width + 20 */
+	.col-content {
+		width: calc(100% - (2 * var(--sidebar-width)));
+	}
+}
+
+
+/* solid color blocking the backgroudn image, to remove distractions from content */
+.bg-content {
+	background-color: black;
+	max-width: var(--content-max-width);
+	margin: auto;
+	padding: 1px;
+	min-height: 100vh;
+}
+
+/* content of a tab menu*/
+.tab-content {
+	max-width: var(--content-max-width); /* max width, keeps content from becoming too wide. it's annoying for eyes to move all the way accross a screen */
+	margin: 20px; /* centers content within background */
+}
+
+
+.info-parent {
+	position: relative;
+}
+
+.info-background {
+	position: relative;
+}
+
+.info-background img {
+	opacity: .4;
+}
+
+.info {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	margin: 10px;
+}
+
+.info h1, .info h3 {
+	margin-top: 0;
+}
+
+.info-play {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 45%;
+	width: 10%;
+	min-width: 70px;
+	cursor: pointer;
+}
+
+.info-return {
+	position: absolute;
+	top: 1%;
+	margin-left: 3%;
+	width: 5%;
+	min-width: 70px;
+	cursor: pointer;
+}
+
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
