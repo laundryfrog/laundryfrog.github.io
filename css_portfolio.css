@@ -10,16 +10,16 @@
 	
 	
 	/* buttons */
-	--button-background: #04AA6D;
-	--button-hover: #04A057;
-	--button-selected: #50BA9C;
+	--button-background: #017958;
+	--button-hover: #163335;
+	--button-selected: #68CC38;
 }
 
 
 /* GLOBAL STYLE */
 body {
 	margin: 0; /* this margin lets elements touch the edges of the screen */
-	background-image: url("media/amphibian_1162_desktop.png");
+	background-image: url("media/background_frogs.png");
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: var(--background-color);
@@ -27,6 +27,9 @@ body {
 	color: var(--text-color);
 }
 
+a {
+	color: var(--text-color);
+}
 
 /* COLUMNS */
 [class*="col-"] {
@@ -89,7 +92,7 @@ body {
 	background-color: var(--button-background);
 	color: white;
 	cursor: pointer; /* Pointer/hand icon */
-	border-color: green;
+	border-color: var(--button-background);
 	border-radius: 10px;
 	display: block; /* Make the buttons appear below each other */
 }
@@ -178,6 +181,9 @@ body {
 	margin: 20px; /* centers content within background */
 }
 
+.proj-professional, .proj-personal {
+	margin-bottom: 20px;
+}
 
 .info-parent {
 	position: relative;
