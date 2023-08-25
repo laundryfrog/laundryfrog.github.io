@@ -2,3 +2,6 @@
 
 My portfolio website, which also is my first attempt at html, CSS, and JavaScript!
 This project is under constant construction as I continue to imporve my portfolio
+
+It's not ready to show off yet but I wanted to figure out hosting and such sooner rather than later, 
+so if you stumble on the site right now it's quite obviously not "done"
