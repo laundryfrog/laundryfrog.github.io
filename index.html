@@ -24,8 +24,8 @@
 	<h3>Junior Rigger</h3>
 
 	<div class="button-group">
-		<button class="page-link" onclick="openPage('Professional', this)" id="defaultOpen">Professional work</button>
-		<button class="page-link" onclick="openPage('Personal', this)">Personal work</button>
+		<button class="page-link" onclick="openPage('Professional', this)">Professional work</button>
+		<button class="page-link" onclick="openPage('Personal', this)" id="defaultOpen">Personal work</button>
 		<button class="page-link" onclick="openPage('About', this)">About me</button>
 	</div>
 	
@@ -127,61 +127,48 @@
 		</div>
 
 		<div id="Personal" class="content-page">
-				<h2>Personal work and school projects</h2>
+			<h2>Personal work and school projects</h2>
+			
+			<hr>
+			
+			<div class="proj">
+				<h1>Alien Parasite</h1>
+				<h2>Rig and animation</h2>
+				<video width="100%" controls>
+					<source src="media/personal/maggy_procedural.mp4" type="video/mp4">
+				</video>
 				
-				<hr>
-				
-				<div class="proj">
-					<div id="pers-01-info" class="info-parent">
-						<div class="info-background" >
-							<video width="100%" controls>
-								<source src="media/personal/maggy_procedural.mp4" type="video/mp4">
-							</video>
-						</div>
-						<div class="info">
-							<h1>Total War: PHARAOH</h1>
-							<h3>Cinematic Trailer</h3>
-							<p><b>Role:</b> Rigging support - props </p>
-							<a href="https://goodbyekansasstudios.com/work/total-war-pharaoh/" target="_blank">Show More</a>
-							<div class="info-play" onclick="document.getElementById('pers-01-more').style.display='block';" >
-								<img src="media/icons/icon_play.png" />
-							</div>
-						</div>
-					</div>
-					<div id="pers-01-more" class="info-parent" style="display:none">
-						<div class="video-wrapper">
-							<iframe src="https://www.youtube.com/embed/lLlD650ZBFQ" frameborder=0 allowfullscreen></iframe>
-						</div>
-						<div class="info-return" onclick="document.getElementById('pers-01-more').style.display='none';" >
-							<img src="media/icons/icon_back.png"/>
-						</div>
-					</div>
+				<div onclick="document.getElementById('pers-01').style.display='block';" >
+					<p style="cursor: pointer;"><u>Read More</u></p>
 				</div>
 				
-				<hr>
-			
-				<div class="proj">
-					<h1>Alien Parasite</h1>
-					<h2>Rig and animation</h2>
+				<div id="pers-01" style="display:none">
 					<video width="100%" controls>
-						<source src="media/personal/maggy_procedural.mp4" type="video/mp4">
+						<source src="media/personal/maggy_rig_showcase.mp4" type="video/mp4">
 					</video>
 					
-					<div id="pers-01" style="display:none">
-						<p>
-							This was the player character in my final game project at Futuregames. I was responsible for rigging and everything related to animation,
-							and the rest of the group consisted of a character artist, an environment artist, and 3 game designers/programmers. 
-							The game was made in unity during 8 weeks.
-						</p>
-						INSERT VIDEO OF player walking with/without procedural tail
-						<p>
-							Knowing animation wasn't my strongest suit, I wanted to try procedurally animating the tail
-						</p>
-					</div>
+					<p>
+						This was the player character in my final game project at Futuregames. I was responsible for rigging and everything related to animation,
+						and the rest of the group consisted of a character artist, an environment artist, and 3 game designers/programmers. 
+						The game was made in unity during 8 weeks.
+					</p>
 					
+					<video width="100%" controls>
+						<source src="media/personal/maggy_comparison.mp4" type="video/mp4">
+					</video>
+					
+					<p>
+						Knowing animation wasn't my strongest suit, I wanted to try procedurally animating the tail.
+					</p>
+					
+					<div onclick="document.getElementById('pers-01').style.display='none';" >
+						<p style="cursor: pointer;"><u>Show Less</u></p>
+					</div>
 				</div>
-				
-				<hr>
+			</div>
+			
+			<hr>
+
 
 		</div>
 		
