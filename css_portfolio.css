@@ -31,61 +31,95 @@ a {
 	color: var(--text-color);
 }
 
-/* COLUMNS */
-[class*="col-"] {
+
+/* MOBILE */
+.content {
 	width: 100%;
-	float: left;
+}
+
+.menu-mobile {
+	display: block; 
+}
+
+.menu-desktop {
+	display: none;
+}
+
+/* DESKTOP THINNEST sidebar and scaled content*/
+@media only screen and (min-width: 768px ) {
+	.menu-mobile {
+		display: none; 
+	}
+	
+	.menu-desktop {
+		display: block;
+	}
+	
+	.content {
+		width: calc(100% - var(--sidebar-width));
+		margin-left: var(--sidebar-width);
+	}
+}
+
+/* DESKTOP MEDIUM sidebar and content, with free space on right*/
+@media only screen and (min-width: 1280px) { /* content-max.width + 1 sidebar-width + 20 */
+	.content {
+		width: var(--content-max-width);
+	}
+}
+
+/* DESKTOP WIDE sidebar and content, with free space on both sides so content is centered*/
+@media only screen and (min-width: 1580px) { /* content-max.width + 2 sidebar-width + 20 */
+	.content {
+		width: calc(100% - (2 * var(--sidebar-width)));
+	}
 }
 
 
 /* MENU BAR */
-.col-menu {
+/* mobile */
+.menu-mobile {
+	min-height: 50px;
 	background-color: #000000AA;
 }
 
-.col-menu img {
-	display: none;
-}
-.col-menu .title {
+.menu-mobile .title{
 	float: left;
-	width: 60%;
 }
 
-.mobile-only{
-	height: 100%;
-}
-
-.mobile-only img {
+.menu-mobile img {
 	float:right;
 	display: inline;
 	height: 65px;
 }
-
 .mobile-only img:hover {
 	background: var(--button-hover);
 	mix-blend-mode: add;
 }
 
-.mobile-only button {
-	width: 100%;
-	padding: 10px;
-	background-color: transparent;
-	color: white;
-	cursor: pointer; /* Pointer/hand icon */
-	border: 0px;
+/* desktop */
+.menu-desktop {
+	background-color: #000000AA;
+	position: fixed;
+	width: calc(var(--sidebar-width) - 2 * var(--sidebar-inner-border));
+	margin: var(--sidebar-inner-border);
 }
 
-.col-menu h2, .col-menu h3 {
-	margin: 10px  ; /* less margin for headers, to keep name/title closer to picture */
-	margin-top: 1px;
-}
-
-.col-menu .button-group {
-	display: none;
+.menu-desktop img {
+	width: calc(100% - 20px);
 	margin: 10px;
 }
 
-.col-menu .button-group button {
+[class*="menu-"] h2, [class*="menu-"] h3{
+	margin: 10px;
+	margin-top: 1px;
+}
+
+.menu-desktop .button-group {
+	margin: 10px;
+}
+
+.button-group button {
 	width: 100%;
 	padding: 10px 24px; /* Some padding */
 	margin-bottom: 10px;
@@ -101,73 +135,13 @@ a {
 	background-color: var(--button-hover);
 }
 
-.contact {
-	display: none;
+.contact img {
+	width: 24%;
 }
 
-/* the container for all content */
-.col-content {
-	margin-left: 0px;
-}
-
-.col-content img{
-	width: 100%;
-}
-
-/* variable based on winder size */
-/* for desktop when thin */
-@media only screen and (min-width: 768px ) {
-	.mobile-only {
-		display: none; 
-	}
-	
-	.col-menu {
-		position: fixed;
-		width: calc(var(--sidebar-width) - 2 * var(--sidebar-inner-border));
-		margin: var(--sidebar-inner-border);
-	}
-	.col-menu img {	
-		display: inline;
-		width: calc(100% - 20px);
-		margin: 10px;
-	}
-	.col-menu .title {
-		width: 100%;
-	}
-	.col-menu .button-group { /* show button group on big screen, and hide dropdown menu */
-		display: block;
-	}
-	
-	.contact {
-		display: inline;
-	}
-	.contact img {
-		width: 24%;
-	}
-	
-	.col-content {
-		width: calc(100% - var(--sidebar-width));
-		margin-left: var(--sidebar-width);
-	}
-}
-
-/* for desktop when medium */
-@media only screen and (min-width: 1280px) { /* content-max.width + 1 sidebar-width + 20 */
-	.col-content {
-		width: var(--content-max-width);
-	}
-}
-
-/* for desktop when wide */
-@media only screen and (min-width: 1580px) { /* content-max.width + 2 sidebar-width + 20 */
-	.col-content {
-		width: calc(100% - (2 * var(--sidebar-width)));
-	}
-}
-
-
-/* solid color blocking the backgroudn image, to remove distractions from content */
-.bg-content {
+/* PAGE CONTENT */
+/* solid color blocking the background image, to remove distractions from content */
+.content-bg {
 	background-color: black;
 	max-width: var(--content-max-width);
 	margin: auto;
@@ -175,15 +149,21 @@ a {
 	min-height: 100vh;
 }
 
-/* content of a tab menu*/
-.tab-content {
+/* content of a page */
+.content-page {
 	max-width: var(--content-max-width); /* max width, keeps content from becoming too wide. it's annoying for eyes to move all the way accross a screen */
 	margin: 20px; /* centers content within background */
 }
 
-.proj-professional, .proj-personal {
+.content img{
+	width: 100%;
+}
+
+
+.proj{
 	margin-bottom: 20px;
 }
+
 
 .info-parent {
 	position: relative;
@@ -228,6 +208,7 @@ a {
 }
 
 
+/* wrapper that contains a in iframe and lets it fit the content */
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */

@@ -17,118 +17,157 @@
 </head>
 
 <body>
+<!-- Desktop sidebar menu -->
+<div class="menu-desktop">
+	<img src="media/about/self.png" alt="me"> 
+	<h2>Abenthy Lillieström</h2>
+	<h3>Junior Rigger</h3>
 
-<div class="row">
-	<div class="col-menu">
-		<img src="media/about/self.png" alt="me"> 
-		<div class="title">
-			<h2>Abenthy Lillieström</h2>
-			<h3>Junior Rigger</h3>
-		</div>
-		
-		<div class="mobile-only">
-			<img src="media/icons/icon_burger.png" alt="hamburger menu" onclick="openMenu('mobile-menu')">
-		</div>
-		
-		<div class="button-group">
-			<button class="tab-link" onclick="openTab('Professional', this)" id="defaultOpen">Professional work</button>
-			<button class="tab-link" onclick="openTab('Personal', this)">Personal work</button>
-			<button class="tab-link" onclick="openTab('About', this)">About me</button>
-		</div>
-		
-		<div class="contact">
-			<h3>Contact</h3>
-			<a href="mailto: abenthylilliestrom@gmail.com">
-			<img src="media/icons/icon_email.png" alt="email">
-			</a>
-			<a href="https://www.linkedin.com/in/abenthy-lilliestr%C3%B6m-b740901a3/">
-			<img src="media/icons/icon_linkedIn.png" alt="linkedIn">
-			</a>
-			<a href="media/CV.pdf">
-			<img src="media/icons/icon_CV.png" alt="CV">
-			</a>
-		</div>
+	<div class="button-group">
+		<button class="page-link" onclick="openPage('Professional', this)" id="defaultOpen">Professional work</button>
+		<button class="page-link" onclick="openPage('Personal', this)">Personal work</button>
+		<button class="page-link" onclick="openPage('About', this)">About me</button>
 	</div>
 	
-	<div class="mobile-only button-group">
-		<div id="mobile-menu" style="display:none">
-			<button class="tab-link" onclick="openTab('Professional', this)">Professional work</button>
-			<button class="tab-link" onclick="openTab('Personal', this)">Personal work</button>
-			<button class="tab-link" onclick="openTab('About', this)">About me</button>
-		</div>
+	<div class="contact">
+		<h3>Contact</h3>
+		<a href="mailto: abenthylilliestrom@gmail.com">
+		<img src="media/icons/icon_email.png" alt="email">
+		</a>
+		<a href="https://www.linkedin.com/in/abenthy-lilliestr%C3%B6m-b740901a3/">
+		<img src="media/icons/icon_linkedIn.png" alt="linkedIn">
+		</a>
+		<a href="media/CV.pdf">
+		<img src="media/icons/icon_CV.png" alt="CV">
+		</a>
+	</div>
+</div>
+
+<!-- Mobile menu and submenu -->
+<div class="menu-mobile">
+	<div class="title">
+		<h2>Abenthy Lillieström</h2>
+		<h3>Junior Rigger</h3>
 	</div>
 	
-	<div class="col-content">
-		<div class="bg-content">
-		
-			<div id="Professional" class="tab-content">
-				<h2>Professional work</h2>
-				
-				<hr>
-				
-				<div class="proj-professional">
-					<div id="prof-01-info" class="info-parent">
-						<div class="info-background">
-							<img src="media/professional/forspoken_thumb.png"/>
-						</div>
-						<div class="info">
-							<h1>Forspoken</h1>
-							<h3>Cinematic Trailer</h3>
-							<p><b>Role:</b> rigging humanoid characters</p>
-							<a href="https://goodbyekansasstudios.com/work/forspoken/" target="_blank">More Information</a>
-							<div class="info-play" onclick="document.getElementById('prof-01-info').style.display='none'; document.getElementById('prof-01-video').style.display='block';" >
-								<img src="media/icons/icon_play.png" />
-							</div>
-						</div>
+	<div>
+		<img src="media/icons/icon_burger.png" alt="hamburger menu" onclick="openMenu('mobile-buttons')">
+	</div>
+	
+	<div class="button-group" id="mobile-buttons" style="display:none">
+		<button class="page-link" onclick="openPage('Professional', this)">Professional work</button>
+		<button class="page-link" onclick="openPage('Personal', this)">Personal work</button>
+		<button class="page-link" onclick="openPage('About', this)">About me</button>
+	</div>
+</div>
+
+
+	
+<!-- Non-menu site content -->
+<div class="content">
+	<div class="content-bg">
+
+		<div id="Professional" class="content-page">
+			<h2>Professional work</h2>
+			
+			<hr>
+			
+			<div class="proj">
+				<div id="prof-01-info" class="info-parent">
+					<div class="info-background">
+						<img src="media/professional/forspoken_thumb.png"/>
 					</div>
-					<div id="prof-01-video" class="info-parent" style="display:none">
-						<div class="video-wrapper info-background">
-							<iframe src="https://player.vimeo.com/video/789947325?h=1e06ee8e47" frameborder=0 allowfullscreen></iframe>
-						</div>
-						<div class="info-return" onclick="document.getElementById('prof-01-info').style.display='block'; document.getElementById('prof-01-video').style.display='none';">
-							<img src="media/icons/icon_back.png"/>
+					<div class="info">
+						<h1>Forspoken</h1>
+						<h3>Cinematic Trailer</h3>
+						<p><b>Role:</b> rigging humanoid characters</p>
+						<a href="https://goodbyekansasstudios.com/work/forspoken/" target="_blank">More Information</a>
+						<div class="info-play" onclick="document.getElementById('prof-01-info').style.display='none'; document.getElementById('prof-01-video').style.display='block';" >
+							<img src="media/icons/icon_play.png" />
 						</div>
 					</div>
 				</div>
+				<div id="prof-01-video" class="info-parent" style="display:none">
+					<div class="video-wrapper info-background">
+						<iframe src="https://player.vimeo.com/video/789947325?h=1e06ee8e47" frameborder=0 allowfullscreen></iframe>
+					</div>
+					<div class="info-return" onclick="document.getElementById('prof-01-info').style.display='block'; document.getElementById('prof-01-video').style.display='none';">
+						<img src="media/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<div class="proj">
+				<div id="prof-02-info" class="info-parent">
+					<div class="info-background" >
+						<img src="media/professional/pharaoh_thumb.png"/>
+					</div>
+					<div class="info">
+						<h1>Total War: PHARAOH</h1>
+						<h3>Cinematic Trailer</h3>
+						<p><b>Role:</b> Rigging support - props </p>
+						<a href="https://goodbyekansasstudios.com/work/total-war-pharaoh/" target="_blank">More Information</a>
+						<div class="info-play" onclick="document.getElementById('prof-02-info').style.display='none'; document.getElementById('prof-02-video').style.display='block';" >
+							<img src="media/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="prof-02-video" class="info-parent" style="display:none">
+					<div class="video-wrapper">
+						<iframe src="https://www.youtube.com/embed/lLlD650ZBFQ" frameborder=0 allowfullscreen></iframe>
+					</div>
+					<div class="info-return" onclick="document.getElementById('prof-02-info').style.display='block'; document.getElementById('prof-02-video').style.display='none';" >
+						<img src="media/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="Personal" class="content-page">
+				<h2>Personal work and school projects</h2>
 				
 				<hr>
 				
-				<div class="proj-professional">
-					<div id="prof-02-info" class="info-parent">
+				<div class="proj">
+					<div id="pers-01-info" class="info-parent">
 						<div class="info-background" >
-							<img src="media/professional/pharaoh_thumb.png"/>
+							<video width="100%" controls>
+								<source src="media/personal/maggy_procedural.mp4" type="video/mp4">
+							</video>
 						</div>
 						<div class="info">
 							<h1>Total War: PHARAOH</h1>
 							<h3>Cinematic Trailer</h3>
 							<p><b>Role:</b> Rigging support - props </p>
-							<a href="https://goodbyekansasstudios.com/work/total-war-pharaoh/" target="_blank">More Information</a>
-							<div class="info-play" onclick="document.getElementById('prof-02-info').style.display='none'; document.getElementById('prof-02-video').style.display='block';" >
+							<a href="https://goodbyekansasstudios.com/work/total-war-pharaoh/" target="_blank">Show More</a>
+							<div class="info-play" onclick="document.getElementById('pers-01-more').style.display='block';" >
 								<img src="media/icons/icon_play.png" />
 							</div>
 						</div>
 					</div>
-					<div id="prof-02-video" class="info-parent" style="display:none">
+					<div id="pers-01-more" class="info-parent" style="display:none">
 						<div class="video-wrapper">
 							<iframe src="https://www.youtube.com/embed/lLlD650ZBFQ" frameborder=0 allowfullscreen></iframe>
 						</div>
-						<div class="info-return" onclick="document.getElementById('prof-02-info').style.display='block'; document.getElementById('prof-02-video').style.display='none';" >
+						<div class="info-return" onclick="document.getElementById('pers-01-more').style.display='none';" >
 							<img src="media/icons/icon_back.png"/>
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div id="Personal" class="tab-content">
-					<h2>Personal work and school projects</h2>
+				
+				<hr>
+			
+				<div class="proj">
+					<h1>Alien Parasite</h1>
+					<h2>Rig and animation</h2>
+					<video width="100%" controls>
+						<source src="media/personal/maggy_procedural.mp4" type="video/mp4">
+					</video>
 					
-					<hr>
-					
-					<div class="proj-personal">
-						<h3>Alien Parasite</h3>
-						<video width="100%" controls>
-							<source src="media/personal/maggy_rig_showcase.mp4" type="video/mp4">
-						</video>
+					<div id="pers-01" style="display:none">
 						<p>
 							This was the player character in my final game project at Futuregames. I was responsible for rigging and everything related to animation,
 							and the rest of the group consisted of a character artist, an environment artist, and 3 game designers/programmers. 
@@ -136,25 +175,24 @@
 						</p>
 						INSERT VIDEO OF player walking with/without procedural tail
 						<p>
-							Knowing animation wasn't my strongest suit, I wanted to try enhancing it with procedural animation. ADD info about aniamtion rigging?
+							Knowing animation wasn't my strongest suit, I wanted to try procedurally animating the tail
 						</p>
-						
 					</div>
 					
-					<hr>
+				</div>
+				
+				<hr>
 
-			</div>
-			
-			<div id="About" class="tab-content">
-					<h2>About me</h2>
-					
-					<hr> 
-					
-					<p>Hello! My name's Abenthy, but I usually go by Ben!</p>
-					<p><--I'm that guy in the sidebar</p>
-			</div>
-			
 		</div>
+		
+		<div id="About" class="content-page">
+				<h2>About me</h2>
+				
+				<hr> 
+				
+				<p>Hello! My name's Abenthy, but I usually go by Ben!</p>
+		</div>
+		
 	</div>
 </div>
 

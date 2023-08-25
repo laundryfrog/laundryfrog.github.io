@@ -1,21 +1,21 @@
-function openTab(tabName, elmnt) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tab-content");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+function openPage(pageName, elmnt) {
+  // Hide all elements with class="content-page" by default */
+  var i, pagecontent, pagelinks;
+  pagecontent = document.getElementsByClassName("content-page");
+  for (i = 0; i < pagecontent.length; i++) {
+    pagecontent[i].style.display = "none";
   }
 
-  // Clear background color of previously clicked tab
-  tablinks = document.getElementsByClassName("tab-link");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
+  // Clear background color of previously clicked page button
+  pagelinks = document.getElementsByClassName("page-link");
+  for (i = 0; i < pagelinks.length; i++) {
+    pagelinks[i].style.backgroundColor = "";
   }
 
-  // Show the specific tab content
-  document.getElementById(tabName).style.display = "block";
+  // Show the specific page content
+  document.getElementById(pageName).style.display = "block";
 
-  // Add the specific color to the button used to open the tab content
+  // Add the specific color to the button used to open the page content
   elmnt.style.backgroundColor = getComputedStyle(elmnt).getPropertyValue("--button-selected");
 }
 
