@@ -1,7 +1,7 @@
 function openPage(pageName, elmnt) {
   // Hide all elements with class="content-page" by default */
   var i, pagecontent, pagelinks;
-  pagecontent = document.getElementsByClassName("content-page");
+  pagecontent = document.getElementsByClassName("col-main");
   for (i = 0; i < pagecontent.length; i++) {
     pagecontent[i].style.display = "none";
   }

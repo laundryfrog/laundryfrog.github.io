@@ -1,20 +1,31 @@
-/* VARIABLES */
 :root {	
+	/* Widths of various components */
+	--sides-width: 40%;
+	
+	--l-min-width: 300px;
+	--l-width: max(calc( var(--sides-width) * .5 ), var(--l-min-width));
+	
+	--sidebar-width: 250px;
+	
+	--r-width: min(
+	calc(100% - var(--content-max-width) - var(--l-width)), 
+	calc(var(--sides-width) - var(--l-width)));
+
+	--main-width: min(
+	calc(100% - var(--l-width) - var(--r-width)),
+	calc(100% - var(--l-width)));
+	
 	--content-max-width: 960px;
-	
-	--sidebar-width: 300px; /* at smallest, sidebar is 130px to prevent text from flowing out. at largest 300px. */
-	--sidebar-inner-border: 20px;
-	
-	--background-color: black;
-	--text-color: white;
-	
+	--content-width: min(var(--content-max-width), calc(100% - 20px));
 	
 	/* custom colors from background image */
 	--dark: #163335;
 	--medium: #017958;
 	--light: #23944D;
+	
+	--background-color: black;
+	--text-color: white;
 }
-
 
 /* GLOBAL STYLE */
 body {
@@ -24,69 +35,62 @@ body {
 	background-size: cover;
 	background-color: var(--background-color);
 	
-	color: var(--text-color);
-	
 	font-family: "Lucida Console", "Courier New", monospace;
 }
 
-a {
+p, h1, h2, h3, a{
+	margin: 15px;
 	color: var(--text-color);
 }
 
-/* MOBILE */
-.content {
-	width: 100%;
+.nomargin {
+	margin: 0;
 }
 
-.menu-mobile {
-	display: block; 
+/* MOBILE FIRST */
+.mobile {
+	display: block;
 }
 
-.menu-desktop {
+.desktop {
 	display: none;
 }
 
-/* DESKTOP THINNEST sidebar and scaled content*/
-@media only screen and (min-width: 768px ) {
-	.menu-mobile {
-		display: none; 
-	}
-	
-	.menu-desktop {
-		display: block;
-	}
-	
-	.content {
-		width: calc(100% - var(--sidebar-width));
-		margin-left: var(--sidebar-width);
-	}
-}
-
-/* DESKTOP MEDIUM sidebar and content, with free space on right*/
-@media only screen and (min-width: 1280px) { /* content-max.width + 1 sidebar-width + 20 */
-	.content {
-		width: var(--content-max-width);
-	}
-}
-
-/* DESKTOP WIDE sidebar and content, with free space on both sides so content is centered*/
-@media only screen and (min-width: 1580px) { /* content-max.width + 2 sidebar-width + 20 */
-	.content {
-		width: calc(100% - (2 * var(--sidebar-width)));
-	}
-}
-
-
-/* MENU BAR */
-/* mobile */
-.menu-mobile {
-	min-height:70px;
+.col-main {
+	width: 100%;
 	background-color: #000000AA;
 }
 
-.menu-mobile .title{
+/* DESKTOP */
+@media only screen and (min-width: 768px ) {
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+	.col-main{
+		width: var(--main-width);
+		margin-left: var(--l-width)
+	}
+}
+
+[class*="col-"] {
 	float: left;
-	margin: 10px;
+	
+	min-height: 100vh;
+	padding: 0px;
+}
+
+.col-l {
+	width: var(--l-width);
+	position: fixed;
+}
+
+.col-r {
+	width: var(--r-width);
+	position: fixed;
+	right: 0;
 }
 
 .menu-mobile img {
@@ -96,22 +100,22 @@ a {
 	cursor: pointer;
 }
 
-/* desktop */
+.menu-mobile .title{
+	float: left;
+	margin: 10px;
+}
+
 .menu-desktop {
 	background-color: #000000AA;
-	position: fixed;
-	width: calc(var(--sidebar-width) - 2 * var(--sidebar-inner-border));
-	margin: var(--sidebar-inner-border);
+	width: var(--sidebar-width);
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 10px;
 }
 
 .menu-desktop img {
 	width: calc(100% - 20px);
 	margin: 10px;
-}
-
-[class*="menu-"] h2, [class*="menu-"] h3{
-	margin: 10px;
-	margin-top: 1px;
 }
 
 .menu-desktop .button-group {
@@ -135,30 +139,43 @@ a {
 }
 
 .contact img {
-	width: 23%;
+	width: 22%;
 }
 
-/* PAGE CONTENT */
-/* solid color blocking the background image, to remove distractions from content */
-.content-bg {
+.contact a {
+	text-decoration: none;
+	margin: 0;
+}
+
+/* Stuff that goes in the content column */
+/* Page title ex: About */
+.title h2 {
+	margin:0px 10px 10px;
+	padding-top: 10px;
+}
+
+.title h3 {
+	margin:0px 10px;
+}
+
+/* A content blob */
+.content {
 	background-color: var(--background-color);
-	max-width: var(--content-max-width);
-	margin: auto;
-	padding: 1px;
-	min-height: 100vh;
+	max-width: var(--content-width);
+	margin: 10px auto 10px;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
-/* content of a page */
-.content-page {
-	max-width: var(--content-max-width); /* max width, keeps content from becoming too wide. it's annoying for eyes to move all the way accross a screen */
-	margin: 20px; /* centers content within background */
+.content img{
+	width: 100%;
 }
 
+/* <hr> line breaks */
 .break-bold {
 	border: 2px solid var(--medium);
 	border-radius: 5px;
 	margin-bottom: 10px;
-	width: 100%;
 }
 
 .break-thin {
@@ -168,14 +185,7 @@ a {
 	width: 100%;
 }
 
-.content img{
-	width: 100%;
-}
-
-.proj{
-	margin-bottom: 20px;
-}
-
+/* Half width column */
 .half-width {
 	width: 50%;
 	float: left;
@@ -188,6 +198,7 @@ a {
 .skills img {
 	width: max(50px, 10%);
 }
+
 
 /* video with custom fake thumbnail, and info */
 .info-parent {
@@ -247,4 +258,3 @@ a {
 	width: 100%;
 	height: 100%;
 }
-
