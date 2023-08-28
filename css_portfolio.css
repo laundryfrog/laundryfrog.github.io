@@ -93,10 +93,15 @@ p, h1, h2, h3, a{
 	right: 0;
 }
 
+.menu-mobile {
+	background-color: var(--background-color);
+	min-height:88px;
+}
+
 .menu-mobile img {
 	float:right;
-	display: inline;
 	height: 65px;
+	margin: 10px;
 	cursor: pointer;
 }
 
