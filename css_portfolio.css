@@ -80,22 +80,20 @@ a {
 /* MENU BAR */
 /* mobile */
 .menu-mobile {
-	min-height: 50px;
+	min-height:70px;
 	background-color: #000000AA;
 }
 
 .menu-mobile .title{
 	float: left;
+	margin: 10px;
 }
 
 .menu-mobile img {
 	float:right;
 	display: inline;
 	height: 65px;
-}
-.mobile-only img:hover {
-	background: var(--dark);
-	mix-blend-mode: add;
+	cursor: pointer;
 }
 
 /* desktop */
@@ -123,7 +121,6 @@ a {
 .button-group button {
 	width: 100%;
 	padding: 10px 24px; /* Some padding */
-	margin-bottom: 10px;
 	background-color: var(--medium);
 	color: white;
 	cursor: pointer; /* Pointer/hand icon */
