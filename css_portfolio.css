@@ -12,7 +12,7 @@
 	/* custom colors from background image */
 	--dark: #163335;
 	--medium: #017958;
-	--light: #68CC38;
+	--light: #23944D;
 }
 
 
@@ -130,6 +130,7 @@ a {
 	border-color: var(--medium);
 	border-radius: 10px;
 	display: block; /* Make the buttons appear below each other */
+	font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .button-group button:hover {
@@ -160,12 +161,14 @@ a {
 	border: 2px solid var(--medium);
 	border-radius: 5px;
 	margin-bottom: 10px;
+	width: 100%;
 }
 
 .break-thin {
 	border: 1px solid var(--dark);
 	border-radius: 5px;
 	margin-bottom: 10px;
+	width: 100%;
 }
 
 .content img{
