@@ -27,7 +27,7 @@
 	--text-color: white;
 }
 
-/* GLOBAL STYLE */
+/* GLOBAL STYLE - background, fonts, etc */
 body {
 	margin: 0; /* this margin lets elements touch the edges of the screen */
 	background-image: url("media/background_frogs.png");
@@ -38,7 +38,7 @@ body {
 	font-family: "Lucida Console", "Courier New", monospace;
 }
 
-p, h1, h2, h3, a{
+p, h1, h2, h3, h4, a{
 	margin: 15px;
 	color: var(--text-color);
 }
@@ -47,7 +47,7 @@ p, h1, h2, h3, a{
 	margin: 0;
 }
 
-/* MOBILE FIRST */
+/* MOBILE - hide desktop only elements */
 .mobile {
 	display: block;
 }
@@ -61,7 +61,7 @@ p, h1, h2, h3, a{
 	background-color: #000000AA;
 }
 
-/* DESKTOP */
+/* DESKTOP - hide mobile only elements */
 @media only screen and (min-width: 768px ) {
 	.mobile {
 		display: none;
@@ -82,17 +82,20 @@ p, h1, h2, h3, a{
 	padding: 0px;
 }
 
+/* Left column, containing menu if there is enough space*/
 .col-l {
 	width: var(--l-width);
 	position: fixed;
 }
 
+/* Right column, currently unused*/
 .col-r {
 	width: var(--r-width);
 	position: fixed;
 	right: 0;
 }
 
+/* Mobile/small screen menu */
 .menu-mobile {
 	background-color: var(--background-color);
 	min-height:88px;
@@ -100,16 +103,17 @@ p, h1, h2, h3, a{
 
 .menu-mobile img {
 	float:right;
-	height: 65px;
-	margin: 10px;
+	height: 50px;
 	cursor: pointer;
 }
 
 .menu-mobile .title{
+	width: 100%;
 	float: left;
-	margin: 10px;
+	margin: 0px;
 }
 
+/* Desktop menu */
 .menu-desktop {
 	background-color: #000000AA;
 	width: var(--sidebar-width);
@@ -190,7 +194,7 @@ p, h1, h2, h3, a{
 	width: 100%;
 }
 
-/* Half width column */
+/* Half width column , used to have an image and some text in the same row */
 .half-width {
 	width: 50%;
 	float: left;
