@@ -1,7 +1,6 @@
 // Load menu when document is ready
   $(document).ready(function () {
-    $('#menu').load('menu.html');
-	alert("I am an alert box!");
+    $('#menu').load('/menu.html');
   });
  
 function toggleMenu(menuName) {
