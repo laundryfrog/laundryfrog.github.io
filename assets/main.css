@@ -18,6 +18,8 @@
 	--content-max-width: 960px;
 	--content-width: min(var(--content-max-width), calc(100% - 20px));
 	
+	--half-width-min: 450px;
+	
 	/* custom colors from background image */
 	--dark: #163335;
 	--medium: #017958;
@@ -27,10 +29,11 @@
 	--text-color: white;
 }
 
+/* TODO: maybe it's possible to split css into separate files so we have one css for the menu only to make it less cluttered? */
 /* GLOBAL STYLE - background, fonts, etc */
 body {
 	margin: 0; /* this margin lets elements touch the edges of the screen */
-	background-image: url("media/background_frogs.png");
+	background-image: url("background_frogs.png");
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: var(--background-color);
@@ -195,11 +198,17 @@ p, h1, h2, h3, h4, a{
 }
 
 /* Half width column , used to have an image and some text in the same row */
-.half-width {
-	width: 50%;
-	float: left;
+/* Actually only half width if enough space is available */
+.half-width-content {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
 }
-.half-width img {
+@media (max-width: 1150px){
+	.half-width-content {
+		grid-template-columns: 100%;
+	}
+}
+.half-width-content img {
 	display: block;
 	margin: auto;
 }
@@ -208,21 +217,16 @@ p, h1, h2, h3, h4, a{
 	width: max(50px, 10%);
 }
 
-
 /* video with custom fake thumbnail, and info */
-.info-parent {
+.project-info-parent {
 	position: relative;
 }
 
-.info-background {
-	position: relative;
-}
-
-.info-background img {
+.project-info-background img {
 	opacity: .4;
 }
 
-.info {
+.project-info {
 	position: absolute;
 	top: 0;
 	height: 100%;
@@ -230,25 +234,25 @@ p, h1, h2, h3, h4, a{
 	margin: 10px;
 }
 
-.info h1, .info h3 {
+.project-info h1, .project-info h3 {
 	margin-top: 0;
 }
 
-.info-play {
+.project-info-play-video {
 	position: absolute;
 	bottom: 10%;
-	margin-left: 45%;
+	margin-left: 80%;
 	width: 10%;
-	min-width: 70px;
+	min-width: 55px;
 	cursor: pointer;
 }
 
-.info-return {
+.project-info-return {
 	position: absolute;
 	top: 1%;
 	margin-left: 3%;
 	width: 5%;
-	min-width: 70px;
+	min-width: 44px;
 	cursor: pointer;
 }
 
