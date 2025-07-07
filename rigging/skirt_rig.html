@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
-    <title>Skirt Rig</title>
+    <title>Abenthy's Portfolio - Skirt Rig</title>
 
-    <link rel="icon" type="image/x-icon" href="/assets/icons/self_icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/about/doodle.png">
     <link rel="stylesheet" href="/assets/main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/assets/main.js"></script>
 
     <meta name="title" property="og:title" content="Abenthy's Portfolio">
-    <meta name="image" property="og:image" content="/assets/rigging/days_skirt/skirt_thumb.png">  <!-- This is the image preview that shows on big links -->
+    <meta name="image" property="og:image" content="https://laundryfrog.net/assets/rigging/days_skirt/skirt_thumb.png">  
     <meta name="description" property="og:description" content="This is the portfolio of Abenthy Lillietröm">
 </head>
 
@@ -32,10 +32,79 @@
 
     <div class="content">
         <h2>Rig</h2>
-
-        <h1>        
-            WIP: There will be LOTS of stuff here soon!
-        </h1>
+        <p>A Maya skirt rig with fake collision and fake gravity used for the player character in the game Toca Days.</p>
+        
+        <video width="100%" controls>
+            <source src="/assets/rigging/days_skirt/skirt_rig.mp4" type="video/mp4">
+        </video>
+        <p><i>Skirt rig showcase</i></p>
+        
+        <p>
+            We originally used an in-engine code-based skirt,
+            but it left a lot to be desired in many animation states. With the animation style used in the project
+            (lots of extreme poses where a leg or arm might easily clip through the skirt),
+            we knew the only good solution in many cases would be to hand-animate the skirt,
+            and possibly blend between the in-engine rig and handmade animation.
+        </p>
+        <p>
+            To test the viability of a hand-animated approach I set up a skirt rig and animated the skirt in some base locomotion 
+            (idle, walking, running, and jump states) to get an idea of if the hand-animated solution could work
+        </p>
+        <div class="half-width-content">
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/rigging/days_skirt/old_skirt.mp4" type="video/mp4">
+                </video>
+                <p><i>In-engine skirt rig</i></p>
+            </div>
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/rigging/days_skirt/new_skirt.mp4" type="video/mp4">
+                </video>
+                <p><i>Keyframed skirt animation</i></p>
+            </div>
+        </div>
+        <p>
+            Since the results were a huge improvement, and was overall pretty easy to animate, we opted to use only the hand-keyed approach. 
+            After improving the skirt rig I ended up tweaking and re-exporting all player animation (at the time 300+ .fbx files!) in a little over a day. 
+            Many animations looked fine with the automatic animation, most needed a few minutes to tweak, 
+            and a few animations with more extreme poses (the ones that handled the previous setup the worst!) needed upwards of 40 minutes of work.
+        </p>
+        <div class="half-width-content">
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/rigging/days_skirt/skirt_disabled.mp4" type="video/mp4">
+                </video>
+                <p><i>Without skirt rig</i></p>
+            </div>
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/rigging/days_skirt/skirt_enabled.mp4" type="video/mp4">
+                </video>
+                <p><i>With skirt rig</i></p>
+            </div>
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/rigging/days_skirt/skirt_tweaked.mp4" type="video/mp4">
+                </video>
+                <p><i>With manual tweaks</i></p>
+            </div>
+        </div>
+        <p>
+            One of the biggest improvements being the sitting-down "emote":
+        </p>
+        <div class="half-width-content">
+            <div>
+                <img src="/assets/rigging/days_skirt/skirt_sitting_before.png">
+                <p><i>Before: Player sitting down with skirt clipping through legs</i></p>
+            </div>
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/rigging/days_skirt/skirt_sitting_after.mp4" type="video/mp4">
+                </video>
+                <p><i>After: Player sitting with minimal skirt clipping</i></p>
+            </div>
+        </div>
     </div>
 </div>
 </body>
