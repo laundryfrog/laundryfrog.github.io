@@ -220,6 +220,7 @@ p, h1, h2, h3, h4, a{
 /* Project info: video with custom fake thumbnail, and info */
 .project-info-parent {
 	position: relative;
+	border: black solid 1px;
 }
 
 .project-info-background img {
