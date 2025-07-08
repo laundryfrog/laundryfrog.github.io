@@ -1,30 +1,30 @@
-:root {	
+:root {
 	/* Widths of various components */
 	--sides-width: 40%;
-	
+
 	--l-min-width: 300px;
 	--l-width: max(calc( var(--sides-width) * .5 ), var(--l-min-width));
-	
+
 	--sidebar-width: 250px;
-	
+
 	--r-width: min(
-	calc(100% - var(--content-max-width) - var(--l-width)), 
-	calc(var(--sides-width) - var(--l-width)));
+			calc(100% - var(--content-max-width) - var(--l-width)),
+			calc(var(--sides-width) - var(--l-width)));
 
 	--main-width: min(
-	calc(100% - var(--l-width) - var(--r-width)),
-	calc(100% - var(--l-width)));
-	
+			calc(100% - var(--l-width) - var(--r-width)),
+			calc(100% - var(--l-width)));
+
 	--content-max-width: 960px;
 	--content-width: min(var(--content-max-width), calc(100% - 20px));
-	
+
 	--half-width-min: 450px;
-	
+
 	/* custom colors from background image */
 	--dark: #163335;
 	--medium: #017958;
 	--light: #23944D;
-	
+
 	--background-color: black;
 	--text-color: white;
 }
@@ -37,7 +37,6 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: var(--background-color);
-	
 	font-family: "Lucida Console", "Courier New", monospace;
 }
 
@@ -46,8 +45,10 @@ p, h1, h2, h3, h4, a{
 	color: var(--text-color);
 }
 
-.nomargin {
-	margin: 0;
+/* MENUS */
+.col-main {
+	width: 100%;
+	background-color: #000000AA;
 }
 
 /* MOBILE - hide desktop only elements */
@@ -59,12 +60,7 @@ p, h1, h2, h3, h4, a{
 	display: none;
 }
 
-.col-main {
-	width: 100%;
-	background-color: #000000AA;
-}
-
-/* DESKTOP - hide mobile only elements */
+/* DESKTOP - hide mobile only elements  and variable main column width*/
 @media only screen and (min-width: 768px ) {
 	.mobile {
 		display: none;
@@ -78,11 +74,11 @@ p, h1, h2, h3, h4, a{
 	}
 }
 
+/* COLUMNS */
+/* Make all columns take the full screen height*/
 [class*="col-"] {
-	float: left;
-	
+	float: left; /* For some reason, this makes sure it extends to the bottom if the content is long*/
 	min-height: 100vh;
-	padding: 0px;
 }
 
 /* Left column, containing menu if there is enough space*/
@@ -105,6 +101,7 @@ p, h1, h2, h3, h4, a{
 }
 
 .menu-mobile img {
+	image-rendering: crisp-edges;
 	float:right;
 	height: 50px;
 	cursor: pointer;
@@ -113,16 +110,15 @@ p, h1, h2, h3, h4, a{
 .menu-mobile .title{
 	width: 100%;
 	float: left;
-	margin: 0px;
 }
 
 /* Desktop menu */
 .menu-desktop {
 	background-color: #000000AA;
 	width: var(--sidebar-width);
-	margin: auto;
-	margin-top: 20px;
-	border-radius: 10px;
+	margin: 20px auto auto; /* 20px margin from top, center horizontally */
+
+	/*border-radius: 10px;*/
 }
 
 .menu-desktop img {
@@ -136,13 +132,13 @@ p, h1, h2, h3, h4, a{
 
 .button-group button {
 	width: 100%;
-	padding: 10px 24px; /* Some padding */
+	padding: 10px; /* Some padding */
+	margin-bottom: 5px;
 	background-color: var(--medium);
 	color: white;
 	cursor: pointer; /* Pointer/hand icon */
-	border-color: var(--medium);
-	border-radius: 10px;
-	display: block; /* Make the buttons appear below each other */
+	border-color: transparent; /* Remove edge */
+	/*border-radius: 50px; !* Round edges *!*/
 	font-family: "Lucida Console", "Courier New", monospace;
 }
 
@@ -150,24 +146,36 @@ p, h1, h2, h3, h4, a{
 	background-color: var(--dark);
 }
 
-.contact img {
+/* Contact image links*/
+.contact-images img {
+	image-rendering: crisp-edges;
 	width: 22%;
 }
-
-.contact a {
+/* Hide links */
+.contact-images a {
 	text-decoration: none;
 	margin: 0;
+}
+
+/* <hr> line breaks */
+.break-bold {
+	border: 2px solid var(--medium);
+	/*border-radius: 5px;*/
+	margin-bottom: 10px;
+}
+
+.break-thin {
+	border: 1px solid var(--dark);
+	/*border-radius: 5px;*/
+	margin-bottom: 10px;
+	width: 100%;
 }
 
 /* Stuff that goes in the content column */
 /* Page title ex: About */
 .title h2 {
-	margin:0px 10px 10px;
+	margin:0 10px 10px;
 	padding-top: 10px;
-}
-
-.title h3 {
-	margin:0px 10px;
 }
 
 /* A content blob */
@@ -175,7 +183,7 @@ p, h1, h2, h3, h4, a{
 	background-color: var(--background-color);
 	max-width: var(--content-width);
 	margin: 10px auto 10px;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 	overflow: hidden;
 }
 
@@ -183,22 +191,7 @@ p, h1, h2, h3, h4, a{
 	width: 100%;
 }
 
-/* <hr> line breaks */
-.break-bold {
-	border: 2px solid var(--medium);
-	border-radius: 5px;
-	margin-bottom: 10px;
-}
-
-.break-thin {
-	border: 1px solid var(--dark);
-	border-radius: 5px;
-	margin-bottom: 10px;
-	width: 100%;
-}
-
-/* Half width column , used to have an image and some text in the same row */
-/* Actually only half width if enough space is available */
+/* Forces content into half width if enough space is available*/
 .half-width-content {
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
@@ -208,16 +201,23 @@ p, h1, h2, h3, h4, a{
 		grid-template-columns: 100%;
 	}
 }
+
 .half-width-content img {
 	display: block;
 	margin: auto;
 }
 
+/* Skill image icons*/
 .skills img {
 	width: max(50px, 10%);
 }
 
-/* video with custom fake thumbnail, and info */
+.no-margin{
+	margin: 0;
+}
+
+
+/* Project info: video with custom fake thumbnail, and info */
 .project-info-parent {
 	position: relative;
 }
@@ -231,23 +231,20 @@ p, h1, h2, h3, h4, a{
 	top: 0;
 	height: 100%;
 	width: 100%;
-	margin: 10px;
-}
-
-.project-info h1, .project-info h3 {
-	margin-top: 0;
 }
 
 .project-info-play-video {
+	image-rendering: crisp-edges;
 	position: absolute;
 	bottom: 10%;
 	margin-left: 80%;
 	width: 10%;
-	min-width: 55px;
+	min-width: 44px;
 	cursor: pointer;
 }
 
 .project-info-return {
+	image-rendering: crisp-edges;
 	position: absolute;
 	top: 1%;
 	margin-left: 3%;
@@ -255,7 +252,6 @@ p, h1, h2, h3, h4, a{
 	min-width: 44px;
 	cursor: pointer;
 }
-
 
 /* wrapper that contains an iframe and lets it fit the content */
 .video-wrapper {

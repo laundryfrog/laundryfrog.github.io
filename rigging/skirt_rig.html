@@ -23,16 +23,18 @@
     <p>If you see this text something went wrong and the menu couldn't load...</p>
     <a href="/rigging.html">Rigging</a>
     <a href="/tools.html">Maya Tools</a>
-    <a href="/about.html">About</a>
+    <a href="/about.html">About/Contact</a>
 </div>
 
 <div class="col-main">
-
-    <h2> <a href="/rigging.html"> < Rigging</a>: Skirt Rig</h2>
+    <div class="title">
+        <h2> <a href="/rigging.html">< Rigging</a>: Skirt Rig</h2>
+        <hr class="break-bold">
+    </div>
 
     <div class="content">
-        <h2>Rig</h2>
-        <p>A Maya skirt rig with fake collision and fake gravity used for the player character in the game Toca Days.</p>
+        <h2>Rig component</h2>
+        <p>I created a Maya skirt rig with fake collision and fake gravity used for the player character in the game Toca Days.</p>
         
         <video width="100%" controls>
             <source src="/assets/rigging/days_skirt/skirt_rig.mp4" type="video/mp4">
@@ -47,7 +49,7 @@
             and possibly blend between the in-engine rig and handmade animation.
         </p>
         <p>
-            To test the viability of a hand-animated approach I set up a skirt rig and animated the skirt in some base locomotion 
+            To test the viability of the hand-animated approach I set up a skirt rig and animated the skirt in some base locomotion 
             (idle, walking, running, and jump states) to get an idea of if the hand-animated solution could work
         </p>
         <div class="half-width-content">
@@ -75,24 +77,24 @@
                 <video width="100%" controls>
                     <source src="/assets/rigging/days_skirt/skirt_disabled.mp4" type="video/mp4">
                 </video>
-                <p><i>Without skirt rig</i></p>
+                <p><i>Skirt rig disabled</i></p>
             </div>
             <div>
                 <video width="100%" controls>
                     <source src="/assets/rigging/days_skirt/skirt_enabled.mp4" type="video/mp4">
                 </video>
-                <p><i>With skirt rig</i></p>
+                <p><i>Skirt rig enabled (automatic animation)</i></p>
             </div>
             <div>
                 <video width="100%" controls>
                     <source src="/assets/rigging/days_skirt/skirt_tweaked.mp4" type="video/mp4">
                 </video>
-                <p><i>With manual tweaks</i></p>
+                <p><i>Skirt rig enabled + manual tweaks</i></p>
             </div>
         </div>
         <p>
             One of the biggest improvements was the sitting-down "emote", 
-            which went from "pretty awful" to this:
+            which went from "pretty awful" to "good enough to stop worrying"
         </p>
         <div class="half-width-content">
             <div>
