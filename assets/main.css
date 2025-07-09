@@ -146,17 +146,6 @@ p, h1, h2, h3, h4, a{
 	background-color: var(--dark);
 }
 
-/* Contact image links*/
-.contact-images img {
-	image-rendering: crisp-edges;
-	width: 22%;
-}
-/* Hide links */
-.contact-images a {
-	text-decoration: none;
-	margin: 0;
-}
-
 /* <hr> line breaks */
 .break-bold {
 	border: 2px solid var(--medium);
@@ -205,6 +194,22 @@ p, h1, h2, h3, h4, a{
 .half-width-content img {
 	display: block;
 	margin: auto;
+}
+
+/* Contact image+links*/
+.contact{
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+	text-align: center;
+	align-items: center;
+	justify-content: center
+}
+
+.contact img {
+	image-rendering: crisp-edges;
+	min-width: 50px;
+	max-width: 70px;
+	margin: 0;
 }
 
 /* Skill image icons*/
