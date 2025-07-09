@@ -40,7 +40,7 @@ body {
 	font-family: "Lucida Console", "Courier New", monospace;
 }
 
-p, h1, h2, h3, h4, a{
+p, h1, h2, h3, h4, a, li{
 	margin: 15px;
 	color: var(--text-color);
 }
