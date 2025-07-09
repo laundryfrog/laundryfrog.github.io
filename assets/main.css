@@ -29,7 +29,6 @@
 	--text-color: white;
 }
 
-/* TODO: maybe it's possible to split css into separate files so we have one css for the menu only to make it less cluttered? */
 /* GLOBAL STYLE - background, fonts, etc */
 body {
 	margin: 0; /* this margin lets elements touch the edges of the screen */
@@ -94,6 +93,10 @@ p, h1, h2, h3, h4, a, li{
 	right: 0;
 }
 
+[class*="col-"] img{
+	image-rendering: crisp-edges;
+}
+
 /* Mobile/small screen menu */
 .menu-mobile {
 	background-color: var(--background-color);
@@ -101,7 +104,6 @@ p, h1, h2, h3, h4, a, li{
 }
 
 .menu-mobile img {
-	image-rendering: crisp-edges;
 	float:right;
 	height: 50px;
 	cursor: pointer;
@@ -118,7 +120,6 @@ p, h1, h2, h3, h4, a, li{
 	width: var(--sidebar-width);
 	margin: 20px auto auto; /* 20px margin from top, center horizontally */
 
-	/*border-radius: 10px;*/
 }
 
 .menu-desktop img {
@@ -138,7 +139,6 @@ p, h1, h2, h3, h4, a, li{
 	color: white;
 	cursor: pointer; /* Pointer/hand icon */
 	border-color: transparent; /* Remove edge */
-	/*border-radius: 50px; !* Round edges *!*/
 	font-family: "Lucida Console", "Courier New", monospace;
 }
 
@@ -149,13 +149,11 @@ p, h1, h2, h3, h4, a, li{
 /* <hr> line breaks */
 .break-bold {
 	border: 2px solid var(--medium);
-	/*border-radius: 5px;*/
 	margin-bottom: 10px;
 }
 
 .break-thin {
 	border: 1px solid var(--dark);
-	/*border-radius: 5px;*/
 	margin-bottom: 10px;
 	width: 100%;
 }
@@ -206,7 +204,6 @@ p, h1, h2, h3, h4, a, li{
 }
 
 .contact img {
-	image-rendering: crisp-edges;
 	min-width: 50px;
 	max-width: 70px;
 	margin: 0;

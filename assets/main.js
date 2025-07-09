@@ -1,7 +1,9 @@
+var menuImg = "_index"
+
 // Load menu when document is ready
-  $(document).ready(function () {
-    $('#menu').load('/menu.html');
-  });
+window.addEventListener("DOMContentLoaded", function(){	
+	$('#menu').load('/menu.html');
+});
  
 function toggleMenu(menuName) {
 	if (document.getElementById(menuName).style.display == "block") {
@@ -10,4 +12,13 @@ function toggleMenu(menuName) {
 	else {
 		document.getElementById(menuName).style.display = "block";
 	}
+}
+
+function setMenuImage(src) {
+	menuImg = src;
+}
+
+function updateMenuImg() {
+	var img = document.getElementById("menuImg");
+	img.src = img.src.replace("_index", menuImg);
 }
