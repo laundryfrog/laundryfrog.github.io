@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>Abenthy's Portfolio - Animation Transfer</title>
+
+    <link rel="icon" type="image/x-icon" href="/assets/icons/doodleselves/self_icon.png">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/assets/main.js"></script>
+    <script>setMenuImage("_animTransfer")</script> <!-- Overriding the icon in the menu -->
+
+    <meta name="title" property="og:title" content="Abenthy's Portfolio">
+    <meta name="image" property="og:image" content="https://laundryfrog.net/assets/tools/tool_animTransfer_thumb.png">
+    <meta name="description" property="og:description" content="Technical Animator/Gameplay Programmer">
+</head>
+
+<body>
+<!-- The menu :) -->
+<div id="menu"></div>
+
+<div class="col-main">
+    <div class="title">
+        <h2> <a href="/tools">< Maya Tools</a>: Animation Transfer</h2>
+        <hr class="break-bold">
+    </div>
+
+    <div class="content">
+        <h2>Transfer animation from one AdvancedSkeleton rig to another</h2>
+
+        <div>
+            <video width="100%" controls>
+                <source src="/assets/tools/tool_animTransfer.mp4" type="video/mp4">
+            </video>
+            <p><i>Animation transfer showcase</i></p>
+        </div>
+        <p>
+            Before I joined the project, the player character in Toca Days went through many different iterations with varying proportions, 
+            and even after the design was locked in place, the rig went through several versions before reaching its final state. 
+            Some of these versions having wildly varying joint and control orientations (!!!).
+            But during this time animation was also being created, so once we reached a "final" rig we had lots of animation that needed to be transferred to it.
+            The regular ways to transfer animation were not giving good enough results, so I created a small tool to do it!
+            The tool uses temporary constraints between the "from rig" controls and the "to rig" controls, 
+            setting a keyframe on a "to control" only when its "from control" has a key to make a usable timeline.
+        </p>
+    </div>
+</div>
+</body>
+</html>
