@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>Abenthy's Portfolio - Playblast Tool</title>
+
+    <link rel="icon" type="image/x-icon" href="/assets/icons/doodleselves/self_icon.png">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/assets/main.js"></script>
+    <script>setMenuImage("_playblast")</script> <!-- Overriding the icon in the menu -->
+
+    <meta name="title" property="og:title" content="Abenthy's Portfolio">
+    <meta name="image" property="og:image" content="https://laundryfrog.net/assets/tools/tool_playblast/tool_playblast_thumb.png">
+    <meta name="description" property="og:description" content="This is the portfolio of Abenthy Lillietröm">
+</head>
+
+<body>
+<!-- The menu :) -->
+<div id="menu"></div>
+
+<div class="col-main">
+    <div class="title">
+        <h2> <a href="/tools">< Maya Tools</a>: Playblast tool</h2>
+        <hr class="break-bold">
+    </div>
+
+    <div class="content">
+        <h2>A tool to create nice-looking playblasts in Maya</h2>
+        
+        <div>
+            <video width="100%" controls>
+                <source src="/assets/tools/tool_playblast/tool_playblast.mp4" type="video/mp4">
+            </video>
+            <p><i>Playblast tool showcase</i></p>
+        </div>
+        <p>
+            We wanted a way to output more official-looking playblasts for archive and/or showcase purposes. 
+            These are used to, for example, show and get feedback on in-progress and completed animation before implementation, 
+            and when creating audio. Knowing the exact frame when things happens makes it a lot easier to both feedback and plan sound effects. 
+        </p>
+        
+        <p>
+            You can include up to 3 different views of the character + props, and these can be positioned wherever wanted.
+            Depending on needs, the output can be 1 single file for all animations, or one file per clip.
+        </p>
+        
+        <p>            
+            As a small quality of life feature, the tool checks if the rig is up to date when opened (and helps update the rig if not!),
+            since my animators tended to do in-progress playblasts relatively frequently, so this became a good way to keep the rig updated in animation scenes.
+        </p>
+        
+        <p>More Examples:</p>
+        
+        <div class="half-width-content">
+            <video width="100%" controls>
+                <source src="/assets/tools/tool_playblast/playblast_alyssa.mp4" type="video/mp4">
+            </video>					<video width="100%" controls>
+                <source src="/assets/tools/tool_playblast/playblast_avatar.mp4" type="video/mp4">
+            </video>					<video width="100%" controls>
+                <source src="/assets/tools/tool_playblast/playblast_crab.mp4" type="video/mp4">
+            </video>					<video width="100%" controls>
+                <source src="/assets/tools/tool_playblast/playblast_paulina.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

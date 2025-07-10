@@ -1,0 +1,54 @@
+<!-- Mobile menu and submenu -->
+<div class="mobile">
+	<div class="menu-mobile">
+		<div class="title">
+			<img src="/assets/icons/icon_burger.png" alt="hamburger menu" onclick="toggleMenu('mobile-buttons')">		
+			<h2>Abenthy Lillieström</h2>
+			<h4>Technical animator & Gameplay Programmer</h4>
+		</div>
+
+		<div class="button-group" id="mobile-buttons" style="display:none">
+			<button class="page-link" onclick="window.location.href='/rigging'">Rigging</button>
+			<button class="page-link" onclick="window.location.href='/tools'">Maya Tools</button>
+			<button class="page-link" onclick="window.location.href='/about'">About Me/Contact</button>
+		</div>
+	</div>
+</div>
+
+<div class="desktop col-l">
+	<div class="menu-desktop">
+		<img id="menuImg"  onload="updateMenuImg()" src="/assets/icons/doodleselves/self_index.png" alt="A drawing of a young man with dyed greenish hair">
+		<div>
+			<h2>Abenthy Lillieström</h2>
+			<h4>Technical Animator & Gameplay Programmer</h4>
+		</div>
+		<div class="button-group">
+			<button class="page-link" onclick="window.location.href='/rigging'">Rigging</button>
+			<button class="page-link" onclick="window.location.href='/tools'">Maya Tools</button>
+			<button class="page-link" onclick="window.location.href='/about'">About Me</button>
+		</div>
+
+		<h3 style="margin-bottom: 0">Contact</h3>
+		<div class="contact">
+			<a href="mailto: abenthylilliestrom@gmail.com">
+				<img src="/assets/icons/icon_email.png" alt="email">
+				<div>
+					Email
+				</div>
+			</a>
+			<a href="https://www.linkedin.com/in/abenthy-lilliestr%C3%B6m-b740901a3/">
+				<img src="/assets/icons/icon_linkedIn.png" alt="linkedIn">
+				<div>
+					LinkedIn
+				</div>
+			</a>
+			<a href="assets/CV_AbenthyLilliestrom.pdf">
+				<img src="/assets/icons/icon_CV.png" alt="CV">
+				<div>
+					CV
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+<!-- Desktop menu -->

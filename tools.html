@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<title>Abenthy's Portfolio - Tools</title>
+
+	<link rel="icon" type="image/x-icon" href="/assets/icons/doodleselves/self_icon.png">
+	<link rel="stylesheet" href="/assets/main.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="/assets/main.js"></script>
+	<script>setMenuImage("_tool")</script> <!-- Overriding the icon in the menu -->
+
+	<meta name="title" property="og:title" content="Abenthy's Portfolio">
+	<meta name="image" property="og:image" content="https://laundryfrog.net/assets/tools/tool_vertexColors_thumb.png">
+	<meta name="description" property="og:description" content="This is the portfolio of Abenthy Lillietröm">
+</head>
+
+<body>
+<!-- The menu :) -->
+<div id="menu"></div>
+
+<!-- Tools page -->
+<div id="Tools" class="col-main">
+	<div class="title">
+		<h2>Maya Tools</h2>
+		<hr class="break-bold"> 
+	</div>
+	
+	<div class="content">
+		<div class="half-width-content">
+
+			<div>
+				<div id="tool-01-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_vertexColors_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Vertex Color & Vertex Alpha Tools</h2>
+						<p>A set of tools to improve workflow when working with vertex colors in Maya</p>
+						<a href="/tools/vertex_color_tools">Read More</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-01-info').style.display='none'; document.getElementById('tool-01-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-01-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_vertexColors.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-01-info').style.display='block'; document.getElementById('tool-01-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div id="tool-02-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_playblast/tool_playblast_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Playblast Tool</h2>
+						<p>A tool which outputs standardised, nice-looking playblasts in Maya</p>
+						<a href="/tools/playblast_tool">Read More</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-02-info').style.display='none'; document.getElementById('tool-02-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-02-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_playblast/tool_playblast.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-02-info').style.display='block'; document.getElementById('tool-02-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+			
+			<div>
+				<div id="tool-03-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_gripHelper_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Item Grip Helper</h2>
+						<p>Helps set up holdable items to animate well while preserving their original pivot</p>
+						<a href="/tools/grip_helper">Read More (Under construction)</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-03-info').style.display='none'; document.getElementById('tool-03-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-03-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_gripHelper_drink.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-03-info').style.display='block'; document.getElementById('tool-03-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div id="tool-04-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_animExport_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Fbx Animation Exporter</h2>
+						<p>Exports animation with each animBot clip as its own .fbx file</p>
+						<a href="/tools/anim_export">Read More (later! Once I finish the page)</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-04-info').style.display='none'; document.getElementById('tool-04-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-04-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_animExport.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-04-info').style.display='block'; document.getElementById('tool-04-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div id="tool-05-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_animTransfer_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Animation Transfer</h2>
+						<p>Transferring animation from one AdvancedSkeleton rig to another even with differing proportions and joint orientations</p>
+						<a href="/tools/anim_transfer">Read More</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-05-info').style.display='none'; document.getElementById('tool-05-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-05-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_animTransfer.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-05-info').style.display='block'; document.getElementById('tool-05-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div id="tool-06-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_rigExport_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Toca Boca Days - Rig Exporter</h2>
+						<p>Final step of the rigging process when I rigged characters for Toca Days</p>
+						<a href="/rigging/days_rig_pipeline">Read More about my rigging pipeline (soon! page in progress!)</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-06-info').style.display='none'; document.getElementById('tool-06-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-06-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_rigExport.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-06-info').style.display='block'; document.getElementById('tool-06-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div id="tool-07-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_visualizeSelected_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Visualize Animated Shapes</h2>
+						<p>
+							A small Maya script that changes the colors of a shape when it is animated. I used this script to make the rig showcase in the
+						</p>
+						<a href="/rigging/alien-parasite">Alien Parasite Rig</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-07-info').style.display='none'; document.getElementById('tool-07-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-07-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_visualizeSelected.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-07-info').style.display='block'; document.getElementById('tool-07-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>

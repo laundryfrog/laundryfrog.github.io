@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<title>Abenthy's Portfolio - Rigging</title>
+
+	<link rel="icon" type="image/x-icon" href="/assets/icons/doodleselves/self_icon.png">
+	<link rel="stylesheet" href="/assets/main.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="/assets/main.js"></script>
+	<script>setMenuImage("_rig")</script> <!-- Overriding the icon in the menu -->
+
+	<meta name="title" property="og:title" content="Abenthy's Portfolio">
+	<meta name="image" property="og:image" content="https://laundryfrog.net/assets/rigging/maggy/maggy_rig.png">  <!-- This is the image preview that shows on big links -->
+	<meta name="description" property="og:description" content="This is the portfolio of Abenthy Lillietröm">
+</head>
+
+<body>
+	<!-- The menu :) -->
+	<div id="menu"></div>
+	
+	<!-- Rigging page -->
+	<div id="Rigging" class="col-main">
+		<div class="title">
+			<h2>Rigging</h2>
+			<hr class="break-bold"> 
+		</div>
+		
+		<div class="content">
+			<div class="half-width-content">
+				
+				<div>
+					<div id="prof-07-info" class="project-info-parent">
+						<div class="project-info-background">
+							<img src="/assets/rigging/days_characters/characters_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>Toca Days characters</h2>
+							<h3>client: TOCA BOCA</h3>
+							<p>Character rigs and implementation</p>
+							<a href="/rigging/days_rig_pipeline">Read More (IN PROGRESS!)</a>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div id="prof-08-info" class="project-info-parent">
+						<div class="project-info-background" >
+							<img src="/assets/rigging/days_skirt/skirt_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>Skirt Rig</h2>
+							<h3>client: TOCA BOCA</h3>
+							<p>Semi-automatic, fake gravity skirt rig</p>
+							<a href="/rigging/skirt_rig">Read More</a>
+							<div class="project-info-play-video" onclick="document.getElementById('prof-08-info').style.display='none'; document.getElementById('prof-08-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-08-video" class="project-info-parent" style="display:none">
+						<video width="100%" controls>
+							<source src="/assets/rigging/days_skirt/skirt_tweaked.mp4" type="video/mp4">
+						</video>
+						<div class="project-info-return" onclick="document.getElementById('prof-08-info').style.display='block'; document.getElementById('prof-08-video').style.display='none';" >
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div id="prof-03-info" class="project-info-parent">
+						<div class="project-info-background">
+							<img src="/assets/rigging/helldivers2_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>Helldivers 2</h2>
+							<h3>client: Goodbye Kansas</h3>
+							<p>Humanoid character and bug rigs for in-game cinematic</p>
+							<a href="https://goodbyekansas.com/work/helldivers-2/" target="_blank">More Information (external)</a>
+							<div class="project-info-play-video" onclick="document.getElementById('prof-03-info').style.display='none'; document.getElementById('prof-03-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-03-video" class="project-info-parent" style="display:none">
+						<div class="video-wrapper project-info-background">
+							<iframe src="https://player.vimeo.com/video/933273312" allowfullscreen></iframe>
+						</div>
+						<div class="project-info-return" onclick="document.getElementById('prof-03-info').style.display='block'; document.getElementById('prof-03-video').style.display='none';">
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div id="prof-01-info" class="project-info-parent">
+						<div class="project-info-background">
+							<img src="/assets/rigging/forspoken_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>Forspoken</h2>
+							<h3>client: Goodbye Kansas</h3>
+							<p>Humanoid character rigs for cinematic trailer</p>
+							<a href="https://goodbyekansasstudios.com/work/forspoken/" target="_blank">More Information (external)</a>
+							<div class="project-info-play-video" onclick="document.getElementById('prof-01-info').style.display='none'; document.getElementById('prof-01-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-01-video" class="project-info-parent" style="display:none">
+						<div class="video-wrapper project-info-background">
+							<iframe src="https://player.vimeo.com/video/789947325" allowfullscreen></iframe>
+						</div>
+						<div class="project-info-return" onclick="document.getElementById('prof-01-info').style.display='block'; document.getElementById('prof-01-video').style.display='none';">
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div id="prof-04-info" class="project-info-parent">
+						<div class="project-info-background" >
+							<img src="/assets/rigging/onepiece_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>One Piece</h2>
+							<h3>client: Goodbye Kansas</h3>
+							<p>Creature rigging support for CGI in series</p>
+							<a href="https://goodbyekansas.com/work/one-piece/" target="_blank">More Information (external)</a>
+							<div class="project-info-play-video" onclick="document.getElementById('prof-04-info').style.display='none'; document.getElementById('prof-04-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-04-video" class="project-info-parent" style="display:none">
+						<div class="video-wrapper">
+							<iframe src="https://player.vimeo.com/video/906304611" allowfullscreen></iframe>
+						</div>
+						<div class="project-info-return" onclick="document.getElementById('prof-04-info').style.display='block'; document.getElementById('prof-04-video').style.display='none';" >
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div id="prof-02-info" class="project-info-parent">
+						<div class="project-info-background" >
+							<img src="/assets/rigging/pharaoh_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>Total War: PHARAOH</h2>
+							<h3>Goodbye Kansas</h3>
+							<p>Prop rigs for cinematic trailer</p>
+							<a href="https://goodbyekansasstudios.com/work/total-war-pharaoh/" target="_blank">More Information (external)</a>
+							<div class="project-info-play-video" onclick="document.getElementById('prof-02-info').style.display='none'; document.getElementById('prof-02-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-02-video" class="project-info-parent" style="display:none">
+						<div class="video-wrapper">
+							<iframe src="https://www.youtube.com/embed/lLlD650ZBFQ" allowfullscreen></iframe>
+						</div>
+						<div class="project-info-return" onclick="document.getElementById('prof-02-info').style.display='block'; document.getElementById('prof-02-video').style.display='none';" >
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div id="prof-05-info" class="project-info-parent">
+						<div class="project-info-background">
+							<img src="/assets/rigging/nightcountry_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>True Detective – Night Country</h2>
+							<h3>client: Goodbye Kansas</h3>
+							<p>Human limb rigs for CGI for series</p>
+							<a href="https://goodbyekansas.com/work/true-detective-night-country/" target="_blank">More Information (external)</a>
+							<div class="project-info-play-video" onclick="document.getElementById('prof-05-info').style.display='none'; document.getElementById('prof-05-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-05-video" class="project-info-parent" style="display:none">
+						<div class="video-wrapper project-info-background">
+							<iframe src="https://player.vimeo.com/video/922433843" allowfullscreen></iframe>
+						</div>
+						<div class="project-info-return" onclick="document.getElementById('prof-05-info').style.display='block'; document.getElementById('prof-05-video').style.display='none';">
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<div id="prof-06-info" class="project-info-parent">
+						<div class="project-info-background" >
+							<img src="/assets/rigging/sho_thumb.png"/>
+						</div>
+						<div class="project-info">
+							<h2>Shõgun</h2>
+							<h3>client: Goodbye Kansas</h3>
+							<p>Human & Prop rigs for CGI for series</p>
+							<a href="https://goodbyekansas.com/work/shogun/" target="_blank">More Information (external)</a>
+							<div class="project-info-play-video" onclick="document.getElementById('prof-06-info').style.display='none'; document.getElementById('prof-06-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="prof-06-video" class="project-info-parent" style="display:none">
+						<div class="video-wrapper">
+							<iframe src="https://player.vimeo.com/video/941198507" allowfullscreen></iframe>
+						</div>
+						<div class="project-info-return" onclick="document.getElementById('prof-06-info').style.display='block'; document.getElementById('prof-06-video').style.display='none';" >
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div id="pers-01-info" class="project-info-parent">
+						<div class="project-info-background">
+							<img src="/assets/rigging/maggy/maggy_rig.png"/>
+						</div>
+						<div class="project-info">
+							<h2>Alien Parasite</h2>
+							<h3>Personal project (Futuregames game project 3)</h3>
+							<p>Character rig, animation, implementation</p>
+							<a href="/rigging/alien-parasite">Read More</a>
+							<div class="project-info-play-video" onclick="document.getElementById('pers-01-info').style.display='none'; document.getElementById('pers-01-video').style.display='block';" >
+								<img src="/assets/icons/icon_play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="pers-01-video" class="project-info-parent" style="display:none">
+						<video width="100%" controls>
+							<source src="/assets/rigging/maggy/maggy_rig_showcase.mp4" type="video/mp4">
+						</video>
+						<div class="project-info-return" onclick="document.getElementById('pers-01-info').style.display='block'; document.getElementById('pers-01-video').style.display='none';">
+							<img src="/assets/icons/icon_back.png"/>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

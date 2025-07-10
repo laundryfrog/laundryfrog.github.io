@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>Abenthy's Portfolio - Vertex Color Tools</title>
+
+    <link rel="icon" type="image/x-icon" href="/assets/icons/doodleselves/self_icon.png">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/assets/main.js"></script>
+    <script>setMenuImage("_color")</script> <!-- Overriding the icon in the menu -->
+
+    <meta name="title" property="og:title" content="Abenthy's Portfolio">
+    <meta name="image" property="og:image" content="https://laundryfrog.net/assets/tools/tool_vertexColors_thumb.png">
+    <meta name="description" property="og:description" content="This is the portfolio of Abenthy Lillietröm">
+</head>
+
+<body>
+<!-- The menu :) -->
+<div id="menu"></div>
+
+<div class="col-main">
+    <div class="title">
+        <h2> <a href="/tools">< Maya Tools</a>:  Vertex Color Tools</h2>
+        <hr class="break-bold">
+    </div>
+
+    <div class="content">
+        <h2>A tool to work with vertex color and vertex alpha in Maya</h2>
+
+        <p>
+            Assets in Toca Boca Days generally utilize vertex colors over textures wherever possible, 
+            often using the alpha channel as a mask for different effects.
+            The native way to work with vertex colors in Maya wasn't optimal for the artists, 
+            so I created a few scripts to help them, which eventually evolved into 2 little tools.
+        </p>
+
+        <hr class="break-thin">
+        
+        <h3>Vertex Color Tool</h3>
+
+        <div class="half-width-content">
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/tools/tool_vertexColors.mp4" type="video/mp4">
+                </video>
+
+                <p><i>Vertex color tool showcase</i></p>
+            </div>
+            <ul>
+                <li>
+                    Probably the biggest annoyance when working with vertex colors was that you could only sample colors from vertices,
+                    so my script lets you sample the color from ANY selection type.
+                </li>
+                <li>                
+                    What if there are multiple colors in the selection? Choose which one you intended to pick from a popup!
+                </li>
+                <li>
+                    Set color without affecting alpha
+                </li>
+                <li>
+                    Set color with a "strength" value - like using a brush with opacity in most art programs. Nice way to blend colors or slightly tweak them!
+                </li>
+                <li>
+                    Copy-pastable hex code to easier copy colors (especially between Unity and Maya!)
+                </li>
+                <li>
+                    Disable input fields - does what it says, preventing the tool from stealing focus if a button press would make you start typing
+                </li>
+                <li>
+                    Option to get the color from mayas "Apply Color Options" window
+                </li>
+            </ul>
+        </div>
+        
+        <hr class="break-thin">
+        
+        <h3>Vertex Alpha Tool</h3>
+
+        <div class="half-width-content">
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/tools/tool_vertexAlpha.mp4" type="video/mp4">
+                </video>
+
+                <p><i>Vertex alpha tool showcase</i></p>
+            </div>
+            <ul>
+                <li>
+                    Edit alpha without affecting colors
+                </li>
+                <li>
+                    Set alpha of selection choosing a value via an input field or slider, plus predefined buttons to set common values 
+                </li>
+                <li>
+                    Add or remove alpha in small increments
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

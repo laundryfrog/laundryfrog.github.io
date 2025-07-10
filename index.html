@@ -6,242 +6,111 @@
 	<meta charset="UTF-8">
   
 	<title>Abenthy's Portfolio</title>
-  
-	<link rel="icon" type="image/x-icon" href="media/icons/self_icon.png">
-	<link rel="stylesheet" href="css_portfolio.css">
-	<script src="js_portfolio.js"></script>
-	
+
+	<link rel="icon" type="image/x-icon" href="/assets/icons/doodleselves/self_icon.png">
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>	
+	<script src="assets/main.js"></script>
+
 	<meta name="title" property="og:title" content="Abenthy's Portfolio">
-	<meta name="image" property="og:image" content="https://laundryfrog.net/media/personal/maggy_rig.png">
-	<meta name="description" property="og:description" content="This is the portfolio of Abenthy Lillietröm"
+	<meta name="image" property="og:image" content="https://laundryfrog.net/assets/rigging/maggy/maggy_rig.png">  <!-- This is the image preview that shows on big links -->
+	<meta name="description" property="og:description" content="This is the portfolio of Abenthy Lillietröm">
 </head>
 
-
-
 <body>
+<!-- The menu :) -->
+<div id="menu"></div>
 
-<div class="mobile">
-	<!-- Mobile menu and submenu -->
-	<div class="menu-mobile">
-		<div class="title">
-			<h2>Abenthy Lillieström</h2>
-			<h3>Technical animator</h3>
-		</div>
-		
-		<div>
-			<img src="media/icons/icon_burger.png" alt="hamburger menu" onclick="openMenu('mobile-buttons')">
-		</div>
-		
-		<div class="button-group" id="mobile-buttons" style="display:none">
-			<button class="page-link" onclick="openPage('Professional', this)">Professional work</button>
-			<button class="page-link" onclick="openPage('Personal', this)">Personal work</button>
-			<button class="page-link" onclick="openPage('About', this)">About me</button>
-		</div>
-	</div>
-</div>
-
-<div class="desktop col-l">
-	<div class="menu-desktop">
-		<img src="media/about/ben.jpg" alt="A photo of a young man with dyed greenish hair"> 
-		<div>
-			<h2>Abenthy Lillieström</h2>
-			<h3>Technical animator</h3>
-		</div>
-		<div class="button-group">
-			<button class="page-link" onclick="openPage('Professional', this)" id="defaultOpen">Professional work</button>
-			<button class="page-link" onclick="openPage('Personal', this)">Personal work</button>
-			<button class="page-link" onclick="openPage('About', this)">About me</button>
-		</div>
-		
-		<div class="contact">
-			<h3>Contact</h3>
-			<a href="mailto: abenthylilliestrom@gmail.com">
-				<img src="media/icons/icon_email.png" alt="email">
-			</a>
-			<a href="https://www.linkedin.com/in/abenthy-lilliestr%C3%B6m-b740901a3/">
-				<img src="media/icons/icon_linkedIn.png" alt="linkedIn">
-			</a>
-			<a href="media/abenthy_lilliestrom_CV.pdf">
-				<img src="media/icons/icon_CV.png" alt="CV">
-			</a>
-		</div>
-	</div>
-</div>
-
-<div id="Professional" class="col-main">
+<div class="col-main">
 	<div class="title">
-		<h2>Professional work</h2>
-		<hr class="break-bold"> 
+		<h2>My Portfolio</h2>
+		<hr class="break-bold">
 	</div>
 	
 	<div class="content">
-		<div id="prof-01-info" class="info-parent">
-			<div class="info-background">
-				<img src="media/professional/forspoken_thumb.png"/>
-			</div>
-			<div class="info">
-				<h1>Forspoken</h1>
-				<h3>Cinematic Trailer</h3>
-				<p><b>Role:</b> rigging humanoid characters</p>
-				<a href="https://goodbyekansasstudios.com/work/forspoken/" target="_blank">More Information</a>
-				<div class="info-play" onclick="document.getElementById('prof-01-info').style.display='none'; document.getElementById('prof-01-video').style.display='block';" >
-					<img src="media/icons/icon_play.png" />
+		<h1>Welcome to my portfolio! Here's a sample of my work:</h1>
+		<div class="half-width-content">
+			<div>
+				<div id="tool-01-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/tools/tool_vertexColors_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Vertex Color & Vertex Alpha Tools</h2>
+						<p>A set of tools to improve workflow when working with vertex colors in Maya</p>
+						<a href="/tools/vertex_color_tools">Read More</a>
+						<div class="project-info-play-video" onclick="document.getElementById('tool-01-info').style.display='none'; document.getElementById('tool-01-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="tool-01-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/tools/tool_vertexColors.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('tool-01-info').style.display='block'; document.getElementById('tool-01-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="prof-01-video" class="info-parent" style="display:none">
-			<div class="video-wrapper info-background">
-				<iframe src="https://player.vimeo.com/video/789947325?h=1e06ee8e47" frameborder=0 allowfullscreen></iframe>
-			</div>
-			<div class="info-return" onclick="document.getElementById('prof-01-info').style.display='block'; document.getElementById('prof-01-video').style.display='none';">
-				<img src="media/icons/icon_back.png"/>
-			</div>
-		</div>
-	</div>
 			
-	<div class="content">
-		<div id="prof-02-info" class="info-parent">
-			<div class="info-background" >
-				<img src="media/professional/pharaoh_thumb.png"/>
-			</div>
-			<div class="info">
-				<h1>Total War: PHARAOH</h1>
-				<h3>Cinematic Trailer</h3>
-				<p><b>Role:</b> Rigging support - props </p>
-				<a href="https://goodbyekansasstudios.com/work/total-war-pharaoh/" target="_blank">More Information</a>
-				<div class="info-play" onclick="document.getElementById('prof-02-info').style.display='none'; document.getElementById('prof-02-video').style.display='block';" >
-					<img src="media/icons/icon_play.png" />
+			<div>
+				<div id="prof-08-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/rigging/days_skirt/skirt_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>Skirt Rig</h2>
+						<h3>client: TOCA BOCA</h3>
+						<p>Semi-automatic, fake gravity skirt rig</p>
+						<a href="/rigging/skirt_rig">Read More</a>
+						<div class="project-info-play-video" onclick="document.getElementById('prof-08-info').style.display='none'; document.getElementById('prof-08-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="prof-08-video" class="project-info-parent" style="display:none">
+					<video width="100%" controls>
+						<source src="/assets/rigging/days_skirt/skirt_tweaked.mp4" type="video/mp4">
+					</video>
+					<div class="project-info-return" onclick="document.getElementById('prof-08-info').style.display='block'; document.getElementById('prof-08-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="prof-02-video" class="info-parent" style="display:none">
-			<div class="video-wrapper">
-				<iframe src="https://www.youtube.com/embed/lLlD650ZBFQ" frameborder=0 allowfullscreen></iframe>
+
+			<div>
+				<div id="prof-04-info" class="project-info-parent">
+					<div class="project-info-background" >
+						<img src="/assets/rigging/onepiece_thumb.png"/>
+					</div>
+					<div class="project-info">
+						<h2>One Piece</h2>
+						<h3>client: Goodbye Kansas</h3>
+						<p>Creature rigging support for CGI in series</p>
+						<a href="https://goodbyekansas.com/work/one-piece/" target="_blank">More Information (external)</a>
+						<div class="project-info-play-video" onclick="document.getElementById('prof-04-info').style.display='none'; document.getElementById('prof-04-video').style.display='block';" >
+							<img src="/assets/icons/icon_play.png" />
+						</div>
+					</div>
+				</div>
+				<div id="prof-04-video" class="project-info-parent" style="display:none">
+					<div class="video-wrapper">
+						<iframe src="https://player.vimeo.com/video/906304611" allowfullscreen></iframe>
+					</div>
+					<div class="project-info-return" onclick="document.getElementById('prof-04-info').style.display='block'; document.getElementById('prof-04-video').style.display='none';" >
+						<img src="/assets/icons/icon_back.png"/>
+					</div>
+				</div>
 			</div>
-			<div class="info-return" onclick="document.getElementById('prof-02-info').style.display='block'; document.getElementById('prof-02-video').style.display='none';" >
-				<img src="media/icons/icon_back.png"/>
+			
+			<div>
+				<h3>Check out more of my work here: (or use the links in the menu!)</h3>
+				<a href="/rigging"><h2>Rigging</h2></a>
+				<a href="/tools"><h2>Maya Tools</h2></a>
 			</div>
 		</div>
 	</div>
 </div>
-
-<div id="Personal" class="col-main">
-	<div class="title">
-		<h2>Personal work</h2>
-		<hr class="break-bold"> 
-	</div>
-	
-	<div class="content">
-		<h1>Alien Parasite</h1>
-		<h2>Rig and animation</h2>
-		<video width="100%" controls>
-			<source src="media/personal/maggy_procedural.mp4" type="video/mp4">
-		</video>
-		
-		<div onclick="document.getElementById('pers-01').style.display='block';" >
-			<p style="cursor: pointer;"><u>Read More</u></p>
-		</div>
-		
-		<div id="pers-01" style="display:none">
-			<video width="100%" controls>
-				<source src="media/personal/maggy_rig_showcase.mp4" type="video/mp4">
-			</video>
-			
-			<p>
-				This was the player character in my final game project at Futuregames. I was responsible for rigging and everything related to animation,
-				the rest of the group consisted of a character artist, an environment artist, and 3 game designers/programmers. 
-				The game was made in unity during 8 weeks.
-			</p>
-			
-			<p>I wanted to try out procedural animation for the tail to make the movement look more natural when moving around.</p>
-			
-			<video width="100%" controls>
-				<source src="media/personal/maggy_comparison.mp4" type="video/mp4">
-			</video>
-			
-			<p><i>Keyframe animation vs with procedural tail</i></p>
-
-			<div onclick="document.getElementById('pers-01').style.display='none';" >
-				<p style="cursor: pointer;"><u>Show Less</u></p>
-			</div>
-		</div>
-	</div>
-			
-	<div class="content">
-		<h1>Visualize animated</h1>
-		<h2>Python script</h2>
-		<video width="100%" controls>
-			<source src="media/personal/visualize_selected.mp4" type="video/mp4">
-		</video>
-		
-		<p>
-			I always thought showcasing a rig by screen recording while you move controls around lacked elegance,
-			so I created a script which animates the color of controls to show which control is currently animating
-		</p>
-	</div>
-</div>
-
-<div id="About" class="col-main">
-	<div class="title">
-		<h2>About</h2>
-		<hr class="break-bold"> 
-	</div>
-	
-	<div class="content">
-		<div class="half-width">
-			<p>Hello! My name's Abenthy, but I usually go by Ben!</p>
-			<p>
-				I'm educated in game art at <b>Futuregames</b>, and further improved my skills in rigging and 
-				python scripting at my internship and job at <b>Goodbye Kansas</b>. 
-			</p>
-		</div>
-		<div class="half-width">
-			<img src="media/about/ben.jpg" alt="A photo of a young man with dyed greenish hair" style="width:80%;"> 
-		</div>
-		
-		<hr class="break-thin">
-		
-		<div class="skills">
-			<h2>Skills</h2>
-			<h3>Highly proficient</h3>
-			<img src="media/icons/skills/maya.png" alt="Autodesk Maya"> 
-			<img src="media/icons/skills/python.png" alt="Python"> 
-			<img src="media/icons/skills/pyqt.png" alt="PyQt"> 
-			<img src="media/icons/skills/gitlab.png" alt="Gitlab"> 
-			<img src="media/icons/skills/trello.png" alt="Trello">
-			<img src="media/icons/skills/unity.png" alt="Unity"> 
-			<h3>Proficient</h3>
-			<img src="media/icons/skills/blender.png" alt="Blender"> 
-			<img src="media/icons/skills/unreal.png" alt="Unreal Engine"> 
-			<img src="media/icons/skills/github.png" alt="GitHub"> 
-			<img src="media/icons/skills/Csharp.png" alt="C#"> 
-			<img src="media/icons/skills/html.png" alt="HTML"> 
-			<img src="media/icons/skills/css.png" alt="CSS"> 
-			<img src="media/icons/skills/javascript.png" alt="JavaScript"> 
-		</div>
-		
-		<hr class="break-thin">
-		
-		<h3>Contact me!</h3>
-		<a class="nomargin" href="mailto: abenthylilliestrom@gmail.com">
-			<p>Mail: abenthylilliestrom@gmail.com</p>
-		</a>
-		<a class="nomargin" href="https://www.linkedin.com/in/abenthy-lilliestr%C3%B6m-b740901a3/">
-			<p>LinkedIn</p>
-		</a>
-		<a class="nomargin" href="media/abenthy_lilliestrom_CV.pdf">
-			<p>CV</p>
-		</a>
-	</div>
-</div>
-
-
-<script>
-// Open the default tab
-document.getElementById("defaultOpen").click(); 
-</script>
-
-
 </body>
-
 </html>

@@ -1,0 +1,272 @@
+:root {
+	/* Widths of various components */
+	--sides-width: 40%;
+
+	--l-min-width: 300px;
+	--l-width: max(calc( var(--sides-width) * .5 ), var(--l-min-width));
+
+	--sidebar-width: 250px;
+
+	--r-width: min(
+			calc(100% - var(--content-max-width) - var(--l-width)),
+			calc(var(--sides-width) - var(--l-width)));
+
+	--main-width: min(
+			calc(100% - var(--l-width) - var(--r-width)),
+			calc(100% - var(--l-width)));
+
+	--content-max-width: 960px;
+	--content-width: min(var(--content-max-width), calc(100% - 20px));
+
+	--half-width-min: 450px;
+
+	/* custom colors from background image */
+	--dark: #163335;
+	--medium: #017958;
+	--light: #23944D;
+
+	--background-color: black;
+	--text-color: white;
+}
+
+/* GLOBAL STYLE - background, fonts, etc */
+body {
+	margin: 0; /* this margin lets elements touch the edges of the screen */
+	background-image: url("background_frogs.png");
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: var(--background-color);
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+p, h1, h2, h3, h4, a, li{
+	margin: 15px;
+	color: var(--text-color);
+}
+
+/* MENUS */
+.col-main {
+	width: 100%;
+	background-color: #000000AA;
+}
+
+/* MOBILE - hide desktop only elements */
+.mobile {
+	display: block;
+}
+
+.desktop {
+	display: none;
+}
+
+/* DESKTOP - hide mobile only elements  and variable main column width*/
+@media only screen and (min-width: 768px ) {
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+	.col-main{
+		width: var(--main-width);
+		margin-left: var(--l-width)
+	}
+}
+
+/* COLUMNS */
+/* Make all columns take the full screen height*/
+[class*="col-"] {
+	float: left; /* For some reason, this makes sure it extends to the bottom if the content is long*/
+	min-height: 100vh;
+}
+
+/* Left column, containing menu if there is enough space*/
+.col-l {
+	width: var(--l-width);
+	position: fixed;
+}
+
+/* Right column, currently unused*/
+.col-r {
+	width: var(--r-width);
+	position: fixed;
+	right: 0;
+}
+
+[class*="col-"] img{
+	image-rendering: crisp-edges;
+}
+
+/* Mobile/small screen menu */
+.menu-mobile {
+	background-color: var(--background-color);
+	min-height:88px;
+}
+
+.menu-mobile img {
+	float:right;
+	height: 50px;
+	cursor: pointer;
+}
+
+.menu-mobile .title{
+	width: 100%;
+	float: left;
+}
+
+/* Desktop menu */
+.menu-desktop {
+	background-color: #000000AA;
+	width: var(--sidebar-width);
+	margin: 20px auto auto; /* 20px margin from top, center horizontally */
+
+}
+
+.menu-desktop img {
+	width: calc(100% - 20px);
+	margin: 10px;
+}
+
+.menu-desktop .button-group {
+	margin: 10px;
+}
+
+.button-group button {
+	width: 100%;
+	padding: 10px; /* Some padding */
+	margin-bottom: 5px;
+	background-color: var(--medium);
+	color: white;
+	cursor: pointer; /* Pointer/hand icon */
+	border-color: transparent; /* Remove edge */
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.button-group button:hover {
+	background-color: var(--dark);
+}
+
+/* <hr> line breaks */
+.break-bold {
+	border: 2px solid var(--medium);
+	margin-bottom: 10px;
+}
+
+.break-thin {
+	border: 1px solid var(--dark);
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+/* Stuff that goes in the content column */
+/* Page title ex: About */
+.title h2 {
+	margin:0 10px 10px;
+	padding-top: 10px;
+}
+
+/* A content blob */
+.content {
+	background-color: var(--background-color);
+	max-width: var(--content-width);
+	margin: 10px auto 10px;
+	/*border-radius: 10px;*/
+	overflow: hidden;
+}
+
+.content img{
+	width: 100%;
+}
+
+/* Forces content into half width if enough space is available*/
+.half-width-content {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+}
+@media (max-width: 1150px){
+	.half-width-content {
+		grid-template-columns: 100%;
+	}
+}
+
+.half-width-content img {
+	display: block;
+	margin: auto;
+}
+
+/* Contact image+links*/
+.contact{
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+	text-align: center;
+	align-items: center;
+	justify-content: center
+}
+
+.contact img {
+	min-width: 50px;
+	max-width: 70px;
+	margin: 0;
+}
+
+/* Skill image icons*/
+.skills img {
+	width: max(50px, 10%);
+}
+
+.no-margin{
+	margin: 0;
+}
+
+
+/* Project info: video with custom fake thumbnail, and info */
+.project-info-parent {
+	position: relative;
+	border: black solid 1px;
+}
+
+.project-info-background img {
+	opacity: .4;
+}
+
+.project-info {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.project-info-play-video {
+	image-rendering: crisp-edges;
+	position: absolute;
+	bottom: 10%;
+	margin-left: 80%;
+	width: 10%;
+	min-width: 44px;
+	cursor: pointer;
+}
+
+.project-info-return {
+	image-rendering: crisp-edges;
+	position: absolute;
+	top: 1%;
+	margin-left: 3%;
+	width: 5%;
+	min-width: 44px;
+	cursor: pointer;
+}
+
+/* wrapper that contains an iframe and lets it fit the content */
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
