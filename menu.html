@@ -1,16 +1,21 @@
 <!-- Mobile menu and submenu -->
 <div class="mobile">
 	<div class="menu-mobile">
-		<div class="title">
-			<img src="/assets/icons/icon_burger.png" alt="hamburger menu" onclick="toggleMenu('mobile-buttons')">		
-			<h2>Abenthy Lillieström</h2>
-			<h4>Technical animator & Gameplay Programmer</h4>
+		<div class="menu-mobile-grid">
+			<img class="menuImg-mobile"  onload="updateMenuImg(this)" src="/assets/icons/doodleselves/self_index.png" alt="A drawing of a young man with dyed greenish hair">
+			
+			<div class="title">
+				<h4>Abenthy Lillieström</h4>
+				<p>Technical animator & Gameplay Programmer</p>
+			</div>
+			
+			<img class="menu-mobile-burger" src="/assets/icons/icon_burger.png" alt="hamburger menu" onclick="toggleMenu('mobile-buttons')">
 		</div>
 
 		<div class="button-group" id="mobile-buttons" style="display:none">
-			<button class="page-link" onclick="window.location.href='/rigging.html'">Rigging</button>
-			<button class="page-link" onclick="window.location.href='/tools.html'">Maya Tools</button>
-			<button class="page-link" onclick="window.location.href='/about.html'">About Me/Contact</button>
+			<button class="page-link" onclick="window.location.href='/rigging'">Rigging</button>
+			<button class="page-link" onclick="window.location.href='/tools'">Maya Tools</button>
+			<button class="page-link" onclick="window.location.href='/about'">About Me/Contact</button>
 		</div>
 	</div>
 </div>
@@ -23,9 +28,9 @@
 			<h4>Technical Animator & Gameplay Programmer</h4>
 		</div>
 		<div class="button-group">
-			<button class="page-link" onclick="window.location.href='/rigging.html'">Rigging</button>
-			<button class="page-link" onclick="window.location.href='/tools.html'">Maya Tools</button>
-			<button class="page-link" onclick="window.location.href='/about.html'">About Me</button>
+			<button class="page-link" onclick="window.location.href='/rigging'">Rigging</button>
+			<button class="page-link" onclick="window.location.href='/tools'">Maya Tools</button>
+			<button class="page-link" onclick="window.location.href='/about'">About Me</button>
 		</div>
 
 		<h3 style="margin-bottom: 0">Contact</h3>
