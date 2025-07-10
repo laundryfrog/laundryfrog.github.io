@@ -18,8 +18,8 @@ function setMenuImage(src) {
 	menuImg = src;
 }
 
-function updateMenuImg() {
-	var img = document.getElementById("menuImg");
+function updateMenuImg(img) {
+	img.onload = null;
 	img.src = img.src.replace("_index", menuImg);
 }
 
