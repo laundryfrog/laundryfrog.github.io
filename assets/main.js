@@ -22,5 +22,3 @@ function updateMenuImg(img) {
 	img.onload = null;
 	img.src = img.src.replace("_index", menuImg);
 }
-
-// TODO: remove all unneeded ".html" in links!
