@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/assets/main.js"></script>
-    <script>setMenuImage("_wip")</script> <!-- Overriding the icon in the menu -->
+    <script>setMenuImage("_grip")</script> <!-- Overriding the icon in the menu -->
 
     <meta name="title" property="og:title" content="Abenthy's Portfolio">
 </head>
@@ -27,7 +27,62 @@
     </div>
 
     <div class="content">
-        <h1>This page is a work in progress, come back later to read more :)</h1>
+        <h2>A tool helping artists make assets compatible with animation</h2>
+
+        <div class="half-width-content">
+            <p>
+                I created a tool which lets the user position a hand the way they want the item to be held, 
+                and then changes the structure of the asset to make it animate correctly. By also being able to preview the animation directly in Maya,
+                it's easy to quickly tweak it until it looks perfect, without going back and forth between Unity and Maya.
+            </p>
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/tools/tool_gripHelper.mp4" type="video/mp4">
+                </video>
+                <p><i>Grip helper tool showcase</i></p>
+            </div>
+        </div>
+        
+        <hr class="break-thin">
+        
+        <h3>Why was this needed?</h3>
+        
+        <div class="half-width-content">
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/tools/gameplay_itemInteractions.mp4" type="video/mp4">
+                </video>
+                <p><i>Item interaction showcase</i></p>
+            </div>
+            
+            <p>
+                In Toca Days there are lots of different items you can hold and interact with in different ways, 
+                like eating and drinking different types of food and beverages, waving flags and signs, blowing bubbles, and so on. 
+                Items can be picked up, used, put in and retrieved from your backpack, placed on the ground, directly gifted to another player. 
+                Some of these actions have custom animations for the type of item, and others have more generic animations for the left or right hand.
+            </p>
+        </div>
+        
+        <p>
+            Item assets need to have their pivot in a logical place (generally bottom centre) to be easily placed in the world
+            (either by level designers, or players themselves), but this pivot doesn't animate well. First of all, 
+            animating from this pivot only really worked if all items of that type were the same general shape and size,
+            which didn't fit our vision of a huge variety of different things to interact with.
+            Secondly, with the scale of items being regularly animated, a pivot closer to the point of contact with the hand looks much better.
+        </p>
+
+        <div class="half-width-content">
+            <img src="/assets/tools/tool_gripHelper_pivots.png">
+            
+            <p>
+                The obvious solution was to use two separate pivots! Each item has two parent objects: one with its pivot placed for optimal animation,
+                and the root object with a pivot optimal for being placed in the world. Items are animated from the animation pivot, 
+                and when placed in the world, the offset between the two pivots is reset to its original value.
+                Placing this animation pivot, even with a reference, was not intuitive (especially since the optimal pivot usually involves rotations!) 
+                and would have taken far too much trial and error to be doable for more than a few assets.
+            </p>
+        </div>
+        
     </div>
 </div>
 </body>
