@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6a8a33d7-f508-4656-bada-84de287c3011" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tools/tool_gripHelper_burrito.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tools/tool_gripHelper_drink.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tools/tool_gripHelper_semla.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/grip_helper.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/grip_helper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigging.html" beforeDir="false" afterPath="$PROJECT_DIR$/rigging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rigging/days_rig_pipeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/rigging/days_rig_pipeline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +66,8 @@
       <workItem from="1752049425746" duration="29999000" />
       <workItem from="1752150487048" duration="5343000" />
       <workItem from="1752224886708" duration="807000" />
-      <workItem from="1752578755281" duration="9619000" />
+      <workItem from="1752578755281" duration="9836000" />
+      <workItem from="1752753383333" duration="6209000" />
     </task>
     <servers />
   </component>

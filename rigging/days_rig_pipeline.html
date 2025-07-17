@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/assets/main.js"></script>
-    <script>setMenuImage("_wip")</script> <!-- Overriding the icon in the menu -->
+    <script>setMenuImage("_pipe")</script> <!-- Overriding the icon in the menu -->
 
     <meta name="title" property="og:title" content="Abenthy's Portfolio">
 </head>
@@ -25,9 +25,62 @@
         <h2> <a href="/rigging">< Rigging</a>: Toca Days Rigging Pipeline</h2>
         <hr class="break-bold">
     </div>
-    
+
     <div class="content">
-        <h1>Page in progress, please come back later!</h1>
+        <img src="/assets/rigging/days_characters/days_all_characters.png">
+
+        <div class="half-width-content">
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/rigging/days_characters/rigging_process.mp4" type="video/mp4">
+                </video>
+                <p><i>Rigging process for a character</i></p>
+            </div>
+
+            <p>
+                Characters in Toca Days use an AdvancedSkeleton rig with a lot of custom behaviour on top.
+                Some of the custom-built structure being things not achievable with AdvancedSkeleton,
+                like the elbows and knees having a set of 3 extra joints to turn a sharp bend into a smooth curve
+                (a stylistic choice to match the characters in Toca Life World). The face uses texture atlases which are animated by offsetting the UVs,
+                and the same face rig template is imported to each character rather than redoing it from scratch.
+            </p>
+
+            <p>
+                The main reason for the custom structure however, is the rig export and <a href="/tools/anim_export">animation export (page in progress!)</a>
+            </p>
+
+            <div>
+                <video width="100%" controls>
+                    <source src="/assets/tools/tool_rigExport.mp4" type="video/mp4">
+                </video>
+                <p><i>Rig export process</i></p>
+            </div>
+        </div>
+
+        <p>
+            I don't want the animators directly referencing my working scene for animation for several reasons:
+        </p>
+
+        <ul>
+            <li>
+                in case a change in the rig breaks some animation the old version still exists
+            </li>
+            <li>
+                my rigging scenes can be messy, with keyframes on controls and occasional unneeded objects like meshes used to help skinning 
+                (keeping the mess is desirable because it can speed up iteration when the rig needs updating)
+            </li>
+            <li>
+                I keep the mesh and many parts of the face rig as references while working in case they need to be updated,
+                and it's generally nice to avoid nested references. The animation version of the rig export can import these references
+            </li>
+        </ul>
+
+        <p>
+            The version of the rig used in engine is of course pared down to just the essentials: skeleton, meshes, and objects tracking face animation.
+            For performance reasons, we also remove skinning from any mesh with only 1 joint influence and parent them under their joint instead in the export. 
+            And remove unneeded leaf joints.
+        </p>
+
     </div>
 </div>
 </body>
