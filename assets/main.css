@@ -86,15 +86,15 @@ p, h1, h2, h3, h4, a, li{
 	position: fixed;
 }
 
+.col-l img {
+	image-rendering: pixelated;
+}
+
 /* Right column, currently unused*/
 .col-r {
 	width: var(--r-width);
 	position: fixed;
 	right: 0;
-}
-
-[class*="col-"] img{
-	image-rendering: pixelated;
 }
 
 /* Mobile/small screen menu */
