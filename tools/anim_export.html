@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/assets/main.js"></script>
-    <script>setMenuImage("_wip")</script> <!-- Overriding the icon in the menu -->
+    <script>setMenuImage("_animExport")</script> <!-- Overriding the icon in the menu -->
 
     <meta name="title" property="og:title" content="Abenthy's Portfolio">
 </head>
@@ -27,7 +27,50 @@
     </div>
 
     <div class="content">
-        <h1>Work in progress! This page is under construction!</h1>
+        <h2>Mass-export animations for use in game</h2>
+        <div>
+            <video width="100%" controls>
+                <source src="/assets/tools/tool_animExport.mp4" type="video/mp4">
+            </video>
+            <p><i>Animation export showcase</i></p>
+        </div>
+        
+        <p>
+            The animation exporter tool exports animation as separate .fbx files for each chosen AnimBot clip in a scene.
+            Features:
+        </p>
+        
+        <ul>
+            <li>
+                output files are stripped down to only the skeleton and face information objects. All that is needed for animation and nothing more!
+            </li>
+            <li>
+                for animations with two players ("co-op emotes") it exports the wanted animations for both participants as separate files
+                (with a name prefix to tell which player the animation is for)
+            </li>
+            <li>
+                root joint animation can be kept or removed
+            </li>
+            <li>
+                optional props can be added by selecting prop objects in the scene. The prop mesh is then exported, 
+                and the skeleton is restructured to include the prop. In the Unity prefab for the character, the prop is added, 
+                and gets animated as part of the character
+            </li>
+            <li>
+                files/takes can be renamed to fit naming conventions. For example adding the character name as a prefix
+            </li>
+            <li>
+                validates that clips follow naming conventions and highlights issues with red. 
+                If the animator tries to export them anyway there is a warning which specifies the exact problems
+            </li>
+            <li>
+                export settings are saved in the scene 
+            </li>
+            <li>
+                to make sure errors aren't destructive, the file is saved before export and re-opened on completion (or on error)
+            </li>
+        </ul>
+
     </div>
 </div>
 </body>
